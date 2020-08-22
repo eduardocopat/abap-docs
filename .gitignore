@@ -1,0 +1,13 @@
+#node
+node_modules/
+
+#SAP HTML docs
+sapdocs/
+
+#TypeScript
+tsconfig.tsbuildinfo
+build/
+
+#MkDocs builds
+docs/
+site/
