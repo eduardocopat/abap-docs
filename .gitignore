@@ -14,3 +14,4 @@ src/**/*.js
 #MkDocs builds
 docs/
 site/
+mkdocs.yml

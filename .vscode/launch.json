@@ -1,0 +1,12 @@
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch IT!",
+    "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+    ],
+    "args": [
+        "${workspaceFolder}/index.ts"
+    ]
+}

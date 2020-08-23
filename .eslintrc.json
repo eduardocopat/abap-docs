@@ -20,6 +20,7 @@
     "rules": {
       "import/extensions": ["off"]
     },
+    "ignorePatterns": ["*.js"],
     "settings": {
         "import/resolver": {
             "node": {

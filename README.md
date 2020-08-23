@@ -23,5 +23,7 @@ https://help.sap.com/doc/abapdocu_731_index_htm/7.31/en-US/abenabap.htm
 
 
 ## run
+npx tsc-watch
+ts-node index.ts
 mkdocs serve
 http://127.0.0.1:8000/
