@@ -2,9 +2,12 @@
   "name": "abap-docs",
   "version": "1.0.0",
   "description": "ABAP documentation",
-  "main": "src/index.js",
+  "type":  "module",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "run": "node -r ts-node/register index.ts"
   },
   "author": "Eduardo Copat",
   "license": "ISC",
@@ -20,5 +23,8 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3"
   }
 }

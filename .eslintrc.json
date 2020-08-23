@@ -5,15 +5,27 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 11
+        "ecmaVersion": 2020
     },
     "plugins": [
         "@typescript-eslint"
-    ]
-    
-
+    ],
+    "rules": {
+      "import/extensions": ["off"]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                //"paths": ["./src"],
+                "extensions": [".ts"]
+            }
+        }
+    }
 }
