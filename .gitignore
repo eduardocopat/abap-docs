@@ -9,6 +9,7 @@ tsconfig.tsbuildinfo
 build/
 index.js
 src/**/*.js
+*.map
 
 #MkDocs builds
 docs/
