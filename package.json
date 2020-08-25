@@ -6,7 +6,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && mkdocs build",
+    "compile": "tsc",
+    "build-docs": "mkdocs build",
     "run": "npx ts-node index.ts"
   },
   "author": "Eduardo Copat",
