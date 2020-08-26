@@ -1,21 +1,22 @@
 import Renderer from 'src/renderer';
 
 export default class Parser {
-    $: any;
+  $: any;
 
-    renderer: Renderer;
+  renderer: Renderer;
 
-    constructor($: any, renderer: Renderer) {
-      this.$ = $;
-      this.renderer = renderer;
-    }
+  constructor($: any, renderer: Renderer) {
+    this.$ = $;
+    this.renderer = renderer;
+  }
 
-    parse(): void {
-      // console.log('Function displays Engine is');
-    }
+  parse(): string {
+    this.parseTitle();
+    return this.renderer.getContents();
+  }
 
-    private parseTitle(): void {
-      const title = this.$('.h1')[0];
-      this.renderer.renderTitle(title);
-    }
+  private parseTitle(): void {
+    const titleNode = this.$('.h1')[0];
+    this.renderer.renderTitle(this.$(titleNode).text().trim());
+  }
 }

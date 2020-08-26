@@ -1,6 +1,7 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
 const pathLib = require('path');
+const chalk = require('chalk');
 
 export default class SapDocsFile {
   path: string;
@@ -9,9 +10,9 @@ export default class SapDocsFile {
     this.path = pathLib.join(path, 'sapdocs');
 
     // the process exit gracefully.
-    if (fs.existsSync(this.path)) {
-      process.stdout.write('sapdocs folder not found');
-      process.exitCode = 1;
+    if (!fs.existsSync(this.path)) {
+      process.stderr.write(chalk.red('sapdocs folder not found'));
+      process.exit(1);
     }
   }
 
