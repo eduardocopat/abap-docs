@@ -1,7 +1,4 @@
-const hljs = require('highlight.js');
 const os = require('os');
-
-const highlightedCode = hljs.highlightAuto('<span>Hello World!</span>').value;
 
 export default class Renderer {
     contents: Array<string>;

@@ -15,7 +15,7 @@ fse.outputFile(path.join('mkdocs.yml'), 'site_name: MkLorum', (err: any) => {
 */
 
 // sapdocs/help.sap.com/doc/abapdocu_740_index_htm/7.40/en-US/abaploop_at_itab.html
-const $ = sapDocsFile.load('7.4', 'abapread_table_key.html');
+const $: CheerioStatic = sapDocsFile.load('7.4', 'abapread_table_key.html');
 const parser = new Parser($, new Renderer());
 const contents = parser.parse();
 

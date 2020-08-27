@@ -1,4 +1,5 @@
-const cheerio = require('cheerio');
+import * as cheerio from 'cheerio';
+
 const fs = require('fs');
 const pathLib = require('path');
 const chalk = require('chalk');
@@ -16,7 +17,7 @@ export default class SapDocsFile {
     }
   }
 
-  load(version: string, filename: string) {
+  load(version: string, filename: string): CheerioStatic {
     // 'C:\git\abap-docs\sapdocs\help.sap.com\doc\abapdocu_740_index_htm\7.40\en-US
     // C:\git\abap-docs\sapdocs\help.sap.com\doc\docabapdocu_740_index_htm\7.40\en-US\
     let versionPath;

@@ -8,11 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc",
     "build-docs": "mkdocs build",
-    "run": "npx ts-node index.ts"
+    "run": "npx ts-node index.ts",
+    "watch": "npx tsc-watch"
+    
   },
   "author": "Eduardo Copat",
   "license": "ISC",
   "devDependencies": {
+    "@types/cheerio": "^0.22.21",
     "@typescript-eslint/eslint-plugin": "^3.9.1",
     "@typescript-eslint/parser": "^3.9.1",
     "eslint": "^7.7.0",
