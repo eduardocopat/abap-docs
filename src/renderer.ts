@@ -1,24 +1,24 @@
-// import Highlighter from 'src/highlighter';
+import Highlighter from './highlighter';
 
 const os = require('os');
 
 export default class Renderer {
-    contents: Array<string>;
+  contents: Array<string>;
 
-    constructor() {
-      this.contents = [];
-    }
+  constructor() {
+    this.contents = [];
+  }
 
-    renderTitle(title: string) {
-      this.contents.push(`# ${title}`);
-      this.contents.push();
-    }
+  renderTitle(title: string) {
+    this.contents.push(`# ${title}`);
+    this.contents.push();
+  }
 
-    getContents() : string {
-      return this.contents.join(os.EOL);
-    }
+  getContents(): string {
+    return this.contents.join(os.EOL);
+  }
 
-    renderCodeBlock(code: string) {
-      // this.contents.push(Highlighter.highlight(code));
-    }
+  renderCodeBlock(code: string) {
+    this.contents.push(Highlighter.highlight(code));
+  }
 }

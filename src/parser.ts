@@ -1,4 +1,8 @@
-import Renderer from 'renderer';
+import Renderer from './renderer';
+
+const Entities = require('html-entities').AllHtmlEntities;
+
+const entities = new Entities();
 
 export default class Parser {
   $: CheerioStatic;
@@ -37,8 +41,26 @@ export default class Parser {
   }
 
   private parseCodeExample(element: CheerioElement) {
-    const span: Cheerio = this.$(element).first();
+    const span: Cheerio = this.$(element).find('.qtext');
+    const code = '';
+
+    const first = this.$(span).children();
+
+    const a = this.$(span).text()!; // Or .html, doesn't really matter with the input you showed
+    let text = this.$(span).html()!; // Or .html, doesn't really matter with the input you showed
+    // text = text.replace(/<br><br>/g, '<br>');
+
+    text = entities.decode(text);
+    text = text.replace(/(\r\n|\n|\r)/gm, '');
+    text = text.replace(/<br>/g, '\r');
+
+    /*
     const code = this.$(span).text();
-    this.renderer.renderCodeBlock(code);
+    const bar = this.$(span).html();
+    const foo = this.$(span).clone();
+    foo.css('white-space', 'nowrap');
+    const text = foo.text();
+    */
+    this.renderer.renderCodeBlock(text);
   }
 }

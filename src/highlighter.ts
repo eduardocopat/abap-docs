@@ -2,6 +2,7 @@ const hljs = require('highlight.js');
 const hljsabap = require('highlightjs-sap-abap');
 
 hljs.registerLanguage('abap', hljsabap);
+
 hljs.configure({
   useBR: true,
 });
