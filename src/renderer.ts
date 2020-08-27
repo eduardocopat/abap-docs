@@ -19,6 +19,6 @@ export default class Renderer {
   }
 
   renderCodeBlock(code: string) {
-    this.contents.push(`\`\`\`\n${code}\`\`\``);
+    this.contents.push(`\`\`\`abap\n${code}\`\`\``);
   }
 }

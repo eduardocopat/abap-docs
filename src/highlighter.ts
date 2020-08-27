@@ -9,6 +9,6 @@ hljs.configure({
 
 export default class Highlighter {
   static highlight(code: string): string {
-    return hljs.highlight('abap', code).value;
+    return hljs.highlight('java', code).value;
   }
 }
