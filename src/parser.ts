@@ -52,7 +52,7 @@ export default class Parser {
 
     text = entities.decode(text);
     text = text.replace(/(\r\n|\n|\r)/gm, '');
-    text = text.replace(/<br>/g, '\r');
+    text = text.replace(/<br>/g, '\n');
 
     /*
     const code = this.$(span).text();

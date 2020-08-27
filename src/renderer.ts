@@ -19,6 +19,6 @@ export default class Renderer {
   }
 
   renderCodeBlock(code: string) {
-    this.contents.push(Highlighter.highlight(code));
+    this.contents.push(`\`\`\`\n${code}\`\`\``);
   }
 }
