@@ -1,4 +1,4 @@
-import Renderer from 'src/renderer';
+import Renderer from 'renderer';
 
 export default class Parser {
   $: CheerioStatic;

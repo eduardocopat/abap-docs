@@ -1,6 +1,6 @@
-import Renderer from './src/renderer';
 import Parser from './src/parser';
 import SapDocsFile from './src/sapDocsFile';
+import Renderer from './src/renderer';
 
 const fse = require('fs-extra');
 const path = require('path');

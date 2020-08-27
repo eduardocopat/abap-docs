@@ -9,7 +9,6 @@
     "build-docs": "mkdocs build",
     "run": "npx ts-node index.ts",
     "watch": "npx tsc-watch"
-    
   },
   "author": "Eduardo Copat",
   "license": "ISC",
