@@ -19,8 +19,11 @@ export default class Parser {
   private parseElement(element: CheerioElement) {
     if (this.$(element).hasClass('h1')) {
       this.parseTitle(element);
+    } else if (this.$(element).hasClass('qtextml1')) {
+      this.parseCodeExample(element);
+    } else {
+      this.parseChildren(element);
     }
-    this.parseChildren(element);
   }
 
   private parseChildren(element: CheerioElement) {
@@ -31,5 +34,11 @@ export default class Parser {
 
   private parseTitle(element: CheerioElement) {
     this.renderer.renderTitle(this.$(element).text().trim());
+  }
+
+  private parseCodeExample(element: CheerioElement) {
+    const span: Cheerio = this.$(element).first();
+    const code = this.$(span).text();
+    this.renderer.renderCodeBlock(code);
   }
 }

@@ -1,3 +1,5 @@
+// import Highlighter from 'src/highlighter';
+
 const os = require('os');
 
 export default class Renderer {
@@ -14,5 +16,9 @@ export default class Renderer {
 
     getContents() : string {
       return this.contents.join(os.EOL);
+    }
+
+    renderCodeBlock(code: string) {
+      // this.contents.push(Highlighter.highlight(code));
     }
 }
