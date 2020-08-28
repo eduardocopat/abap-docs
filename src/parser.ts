@@ -60,14 +60,56 @@ export default class Parser {
         this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
         break;
       default:
+
         for (let index = 1; index < blockElements.length; index++) {
           const element = blockElements[index];
-          this.renderer.renderText(this.$(element).html()!);
+          if (this.$(element).is('ul')) {
+            this.parseList(element);
+          } else {
+            this.renderer.renderText(this.$(element).html()!);
+          }
         }
-
-        break;
     }
   }
+
+  parseList(element: CheerioElement) {
+    let ulTag = '<ul>';
+
+    // Standard abap documentation doesn't nest UL,
+    // so we need to apply the same CSS style to ident
+    if (this.$(element).hasClass('circlem2')) {
+      ulTag = '<ul class="circlem2">';
+    }
+
+    this.renderer.renderText(ulTag);
+    let html = this.$(element).html()!;
+    if (html) {
+      // Remove extra line break
+      html = html.replace(/<br>/gm, '');
+      html = html.replace(/(\r\n|\n|\r)/gm, '');
+    }
+    this.renderer.renderText(html);
+    this.renderer.renderText('</ul>');
+  }
+
+  /*
+  parseList(blockElements: CheerioElement[]) {
+    this.renderer.renderText('<ul>');
+    for (let index = 1; index < blockElements.length; index++) {
+      const element = blockElements[index];
+      let html = this.$(element).html()!;
+
+      if (this.$(element).is('li')) {
+        if (html) {
+          // Remove extra line break
+          html = html.replace(/<br><br>/g, '<br>');
+        }
+      }
+      this.renderer.renderText(html);
+    }
+    this.renderer.renderText('</ul>');
+  }
+  */
 
   private renderHeader(headerElement: Cheerio): string {
     const header = headerElement.find('.h1');
