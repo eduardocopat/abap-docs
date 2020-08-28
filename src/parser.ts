@@ -53,7 +53,6 @@ export default class Parser {
   parseBlockElements(blockElements: CheerioElement[]) {
     const header: Cheerio = this.$(blockElements[0]);
 
-    header.find('.h1');
     const headerText: string = this.renderHeader(header);
 
     switch (headerText) {
@@ -94,21 +93,27 @@ export default class Parser {
     */
   }
 
-  private renderHeader(header: Cheerio): string {
+  private renderHeader(headerElement: Cheerio): string {
+    const header = headerElement.find('.h1');
     let headerTitle = this.$(header).text().trim();
-
     if (headerTitle !== '') {
       this.renderer.renderTitle(headerTitle);
       return headerTitle;
     }
 
-    headerTitle = this.$(header).find('.h3').text();
+    headerTitle = this.$(headerElement).find('.h2').text().trim();
+    if (headerTitle !== '') {
+      this.renderer.renderH2(headerTitle);
+      return headerTitle;
+    }
+
+    headerTitle = this.$(headerElement).find('.h3').text().trim();
     if (headerTitle !== '') {
       this.renderer.renderH3(headerTitle);
       return headerTitle;
     }
 
-    headerTitle = this.$(header).find('.h4').text();
+    headerTitle = this.$(headerElement).find('.h4').text().trim();
     if (headerTitle !== '') {
       this.renderer.renderH3(headerTitle);
       return headerTitle;
