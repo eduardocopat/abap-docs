@@ -30,7 +30,6 @@ export default class Parser {
   parseBlock(element: CheerioElement) {
     const blockElements: Array<CheerioElement> = [];
 
-    // @TODO: Render block title?
     blockElements.push(element);
     let { next } = element;
     // eslint-disable-next-line no-constant-condition
@@ -53,6 +52,7 @@ export default class Parser {
   parseBlockElements(blockElements: CheerioElement[]) {
     for (let index = 0; index < blockElements.length; index++) {
       const element = blockElements[index];
+      // @TODO: Render block title?
       this.renderer.renderText(this.$(element).text());
       // this.renderer.renderHTML(this.$(element).html()!);
       // const children = (element) ? (element.children || []) : [];

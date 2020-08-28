@@ -23,7 +23,8 @@
             "argsIgnorePattern": "^_"
         }],
         "class-methods-use-this": ["off"],
-        "no-plusplus": ["off"]
+        "no-plusplus": ["off"],
+        "linebreak-style": ["error", "unix"]
 
     },
     "ignorePatterns": ["*.js"],
