@@ -44,31 +44,33 @@ export default class Parser {
     this.parseBlockElements(blockElements);
 
     if (next) { this.parseBlock(next); }
-
-    // Do stuff with block elements
-
-    // parse next block
   }
 
   parseBlockElements(blockElements: CheerioElement[]) {
     const header: Cheerio = this.$(blockElements[0]);
-
     const headerText: string = this.renderHeader(header);
 
     switch (headerText) {
       case 'Syntax':
         this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
         break;
+      case 'Note' || 'Notes':
+        this.regularParseBlockElements(blockElements);
+        break;
       default:
+        this.regularParseBlockElements(blockElements);
+        break;
+    }
+  }
 
-        for (let index = 1; index < blockElements.length; index++) {
-          const element = blockElements[index];
-          if (this.$(element).is('ul')) {
-            this.parseList(element);
-          } else {
-            this.renderer.renderText(this.$(element).html()!);
-          }
-        }
+  private regularParseBlockElements(blockElements: CheerioElement[]) {
+    for (let index = 1; index < blockElements.length; index++) {
+      const element = blockElements[index];
+      if (this.$(element).is('ul')) {
+        this.parseList(element);
+      } else {
+        this.parseText(this.$(element).html()!);
+      }
     }
   }
 
@@ -81,35 +83,20 @@ export default class Parser {
       ulTag = '<ul class="circlem2">';
     }
 
-    this.renderer.renderText(ulTag);
+    this.parseText(ulTag);
     let html = this.$(element).html()!;
     if (html) {
       // Remove extra line break
       html = html.replace(/<br>/gm, '');
       html = html.replace(/(\r\n|\n|\r)/gm, '');
     }
-    this.renderer.renderText(html);
-    this.renderer.renderText('</ul>');
+    this.parseText(html);
+    this.parseText('</ul>');
   }
 
-  /*
-  parseList(blockElements: CheerioElement[]) {
-    this.renderer.renderText('<ul>');
-    for (let index = 1; index < blockElements.length; index++) {
-      const element = blockElements[index];
-      let html = this.$(element).html()!;
-
-      if (this.$(element).is('li')) {
-        if (html) {
-          // Remove extra line break
-          html = html.replace(/<br><br>/g, '<br>');
-        }
-      }
-      this.renderer.renderText(html);
-    }
-    this.renderer.renderText('</ul>');
+  private parseText(text: string) {
+    this.renderer.renderText(text);
   }
-  */
 
   private renderHeader(headerElement: Cheerio): string {
     const header = headerElement.find('.h1');
@@ -164,13 +151,6 @@ export default class Parser {
     this.renderer.renderH2(text.text());
     this.parseBlock(element);
   }
-  /*
-  private parseChildren(element: CheerioElement) {
-    this.$(element).children().each((_index: number, child: CheerioElement) => {
-      this.parseRootElements(child);
-    });
-  }
-  */
 
   private parseCodeExample(element: CheerioElement) {
     const span: Cheerio = this.$(element).find('.qtext');
