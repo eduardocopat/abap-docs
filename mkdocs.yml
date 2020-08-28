@@ -1,0 +1,14 @@
+site_name: MkLorum
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    primary: blue
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - javascript/config.js
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css  
+  - css/abap-docs.css
+markdown_extensions:
+  - admonition  
