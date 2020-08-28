@@ -1,3 +1,4 @@
+/* eslint-disable no-continue */
 import Renderer from './renderer';
 
 const Entities = require('html-entities').AllHtmlEntities;
@@ -50,17 +51,77 @@ export default class Parser {
   }
 
   parseBlockElements(blockElements: CheerioElement[]) {
-    for (let index = 0; index < blockElements.length; index++) {
-      const element = blockElements[index];
-      // @TODO: Render block title?
-      this.renderer.renderText(this.$(element).text());
-      // this.renderer.renderHTML(this.$(element).html()!);
-      // const children = (element) ? (element.children || []) : [];
-      // if (children.length > 0) {
-      //  this.parseBlockElements(children);
-      // }
+    const header: Cheerio = this.$(blockElements[0]);
+
+    header.find('.h1');
+    const headerText: string = this.renderHeader(header);
+
+    switch (headerText) {
+      case 'Syntax':
+        this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
+        break;
+      default:
+        for (let index = 1; index < blockElements.length; index++) {
+          const element = blockElements[index];
+          this.renderer.renderText(this.$(element).html()!);
+        }
+
+        break;
     }
+
+    /*
+    for (let index = 1; index < blockElements.length; index++) {
+      const element = blockElements[index];
+
+      // @TODO: Render block title?
+      if (index === 0) {
+
+        // this.parseBlock(element);
+
+        //        const asd: any = this.$(element).find('.h2');
+        //      this.parseH2(asd);
+      } else {
+        switch (headerTitle) {
+          case 'Syntax':
+            this.renderer.renderSyntaxBlock(this.$(element).html()!);
+            break;
+          default:
+            this.renderer.renderText(this.$(element).html()!);
+            break;
+        }
+      }
+    }
+    */
   }
+
+  private renderHeader(header: Cheerio): string {
+    let headerTitle = this.$(header).text().trim();
+
+    if (headerTitle !== '') {
+      this.renderer.renderTitle(headerTitle);
+      return headerTitle;
+    }
+
+    headerTitle = this.$(header).find('.h3').text();
+    if (headerTitle !== '') {
+      this.renderer.renderH3(headerTitle);
+      return headerTitle;
+    }
+
+    headerTitle = this.$(header).find('.h4').text();
+    if (headerTitle !== '') {
+      this.renderer.renderH3(headerTitle);
+      return headerTitle;
+    }
+
+    return headerTitle;
+  }
+
+  // this.renderer.renderHTML(this.$(element).html()!);
+  // const children = (element) ? (element.children || []) : [];
+  // if (children.length > 0) {
+  //  this.parseBlockElements(children);
+  // }
 
   private isBlock(element: CheerioElement): boolean {
     const { isHeader } = this;
