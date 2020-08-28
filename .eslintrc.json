@@ -21,7 +21,10 @@
         "import/extensions": ["off"],
         "no-unused-vars": ["error", {
             "argsIgnorePattern": "^_"
-        }]
+        }],
+        "class-methods-use-this": ["off"],
+        "no-plusplus": ["off"]
+
     },
     "ignorePatterns": ["*.js"],
     "settings": {
