@@ -67,30 +67,6 @@ export default class Parser {
 
         break;
     }
-
-    /*
-    for (let index = 1; index < blockElements.length; index++) {
-      const element = blockElements[index];
-
-      // @TODO: Render block title?
-      if (index === 0) {
-
-        // this.parseBlock(element);
-
-        //        const asd: any = this.$(element).find('.h2');
-        //      this.parseH2(asd);
-      } else {
-        switch (headerTitle) {
-          case 'Syntax':
-            this.renderer.renderSyntaxBlock(this.$(element).html()!);
-            break;
-          default:
-            this.renderer.renderText(this.$(element).html()!);
-            break;
-        }
-      }
-    }
-    */
   }
 
   private renderHeader(headerElement: Cheerio): string {
@@ -121,12 +97,6 @@ export default class Parser {
 
     return headerTitle;
   }
-
-  // this.renderer.renderHTML(this.$(element).html()!);
-  // const children = (element) ? (element.children || []) : [];
-  // if (children.length > 0) {
-  //  this.parseBlockElements(children);
-  // }
 
   private isBlock(element: CheerioElement): boolean {
     const { isHeader } = this;
@@ -162,21 +132,12 @@ export default class Parser {
 
   private parseCodeExample(element: CheerioElement) {
     const span: Cheerio = this.$(element).find('.qtext');
-    // @TODO: rename text to code
-    let text = this.$(span).html()!; // Or .html, doesn't really matter with the input you showed
-    // text = text.replace(/<br><br>/g, '<br>');
+    let code = this.$(span).html()!;
 
-    text = entities.decode(text);
-    text = text.replace(/(\r\n|\n|\r)/gm, '');
-    text = text.replace(/<br>/g, '\n');
+    code = entities.decode(code);
+    code = code.replace(/(\r\n|\n|\r)/gm, '');
+    code = code.replace(/<br>/g, '\n');
 
-    /*
-const code = this.$(span).text();
-const bar = this.$(span).html();
-const foo = this.$(span).clone();
-foo.css('white-space', 'nowrap');
-const text = foo.text();
-*/
-    this.renderer.renderCodeBlock(text);
+    this.renderer.renderCodeBlock(code);
   }
 }
