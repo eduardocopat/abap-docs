@@ -50,12 +50,26 @@ export default class Parser {
     const header: Cheerio = this.$(blockElements[0]);
     const headerText: string = this.renderHeader(header);
 
+    console.log(headerText);
+
     switch (headerText) {
       case 'Syntax':
         this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
         break;
-      case 'Note' || 'Notes':
+      case 'Note':
+      case 'Notes':
+        this.parseText('<div markdown="span" class="admonition note">');
+        this.parseText(`<p class="admonition-title">${headerText}</p>`);
+
         this.regularParseBlockElements(blockElements);
+        this.parseText('</div>');
+        break;
+      case 'Example':
+        this.parseText('<div markdown="span" class="admonition example">');
+        this.parseText(`<p class="admonition-title">${headerText}</p>`);
+
+        this.regularParseBlockElements(blockElements);
+        this.parseText('</div>');
         break;
       default:
         this.regularParseBlockElements(blockElements);
@@ -68,6 +82,8 @@ export default class Parser {
       const element = blockElements[index];
       if (this.$(element).is('ul')) {
         this.parseList(element);
+      } else if (this.$(element).hasClass('qtextml1')) {
+        this.parseCodeExample(element);
       } else {
         this.parseText(this.$(element).html()!);
       }
@@ -87,15 +103,26 @@ export default class Parser {
     let html = this.$(element).html()!;
     if (html) {
       // Remove extra line break
-      html = html.replace(/<br>/gm, '');
-      html = html.replace(/(\r\n|\n|\r)/gm, '');
+      html = html.replace(/<br>\n<br>/gm, '\n');
+      console.log(html);
+      html = html.replace(/<br><br><\/li>/gm, '</li>');
     }
     this.parseText(html);
     this.parseText('</ul>');
   }
 
   private parseText(text: string) {
-    this.renderer.renderText(text);
+    if (!text) { return; }
+    let parsedText = text;
+
+    // https://regex101.com/r/1mionM/2
+    // parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;"class="hljs abap">${matched}</code>`);
+
+    parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
+    // Remove extra line break
+    parsedText = parsedText.replace(/<br><br>/gm, '\n');
+
+    this.renderer.renderText(parsedText);
   }
 
   private renderHeader(headerElement: Cheerio): string {

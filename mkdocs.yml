@@ -12,4 +12,5 @@ extra_css:
   - css/abap-docs.css
 markdown_extensions:
   - admonition  
+  - pymdownx.extra
   - pymdownx.superfences
