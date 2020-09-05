@@ -5,6 +5,11 @@ const Entities = require('html-entities').AllHtmlEntities;
 
 const entities = new Entities();
 
+interface Header {
+  title: string;
+  render: (renderer: Renderer) => void;
+}
+
 export default class Parser {
   $: CheerioStatic;
 
@@ -47,31 +52,35 @@ export default class Parser {
   }
 
   parseBlockElements(blockElements: CheerioElement[]) {
-    const header: Cheerio = this.$(blockElements[0]);
-    const headerText: string = this.renderHeader(header);
+    const headerElement: Cheerio = this.$(blockElements[0]);
 
-    console.log(headerText);
+    const header = this.determineHeader(headerElement);
 
-    switch (headerText) {
+    switch (header.title) {
       case 'Syntax':
+        header.render(this.renderer);
         this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
         break;
       case 'Note':
       case 'Notes':
+        // If the header is not renderer, we somehow need to render an empty header
+        // otherwise it gets merged with the next block. Could not solve it..
+        this.parseText('###### ');
         this.parseText('<div markdown="span" class="admonition note">');
-        this.parseText(`<p class="admonition-title">${headerText}</p>`);
-
+        this.parseText(`<p class="admonition-title">${header.title}</p>`);
         this.regularParseBlockElements(blockElements);
         this.parseText('</div>');
         break;
       case 'Example':
+        this.parseText('###### ');
         this.parseText('<div markdown="span" class="admonition example">');
-        this.parseText(`<p class="admonition-title">${headerText}</p>`);
+        this.parseText(`<p class="admonition-title">${header.title}</p>`);
 
         this.regularParseBlockElements(blockElements);
         this.parseText('</div>');
         break;
       default:
+        header.render(this.renderer);
         this.regularParseBlockElements(blockElements);
         break;
     }
@@ -104,7 +113,6 @@ export default class Parser {
     if (html) {
       // Remove extra line break
       html = html.replace(/<br>\n<br>/gm, '\n');
-      console.log(html);
       html = html.replace(/<br><br><\/li>/gm, '</li>');
     }
     this.parseText(html);
@@ -116,8 +124,6 @@ export default class Parser {
     let parsedText = text;
 
     // https://regex101.com/r/1mionM/2
-    // parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;"class="hljs abap">${matched}</code>`);
-
     parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
     // Remove extra line break
     parsedText = parsedText.replace(/<br><br>/gm, '\n');
@@ -125,33 +131,47 @@ export default class Parser {
     this.renderer.renderText(parsedText);
   }
 
-  private renderHeader(headerElement: Cheerio): string {
-    const header = headerElement.find('.h1');
-    let headerTitle = this.$(header).text().trim();
+  private determineHeader(element: Cheerio): Header {
+    const header: Header = {
+      title: '',
+      // eslint-disable-next-line no-unused-vars
+      render(renderer: Renderer) { },
+    };
+
+    const headerElement = element.find('.h1');
+    let headerTitle = this.$(headerElement).text().trim();
     if (headerTitle !== '') {
-      this.renderer.renderTitle(headerTitle);
-      return headerTitle;
+      header.title = headerTitle;
+      // eslint-disable-next-line func-names
+      header.render = function (renderer: Renderer) { renderer.renderTitle(headerTitle); };
+      return header;
     }
 
-    headerTitle = this.$(headerElement).find('.h2').text().trim();
+    headerTitle = this.$(element).find('.h2').text().trim();
     if (headerTitle !== '') {
-      this.renderer.renderH2(headerTitle);
-      return headerTitle;
+      header.title = headerTitle;
+      // eslint-disable-next-line func-names
+      header.render = function (renderer: Renderer) { renderer.renderH2(headerTitle); };
+      return header;
     }
 
-    headerTitle = this.$(headerElement).find('.h3').text().trim();
+    headerTitle = this.$(element).find('.h3').text().trim();
     if (headerTitle !== '') {
-      this.renderer.renderH3(headerTitle);
-      return headerTitle;
+      header.title = headerTitle;
+      // eslint-disable-next-line func-names
+      header.render = function (renderer: Renderer) { renderer.renderH3(headerTitle); };
+      return header;
     }
 
-    headerTitle = this.$(headerElement).find('.h4').text().trim();
+    headerTitle = this.$(element).find('.h4').text().trim();
     if (headerTitle !== '') {
-      this.renderer.renderH3(headerTitle);
-      return headerTitle;
+      header.title = headerTitle;
+      // eslint-disable-next-line func-names
+      header.render = function (renderer: Renderer) { renderer.renderH3(headerTitle); };
+      return header;
     }
 
-    return headerTitle;
+    return header;
   }
 
   private isBlock(element: CheerioElement): boolean {
