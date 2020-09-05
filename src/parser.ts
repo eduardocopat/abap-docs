@@ -95,6 +95,12 @@ export default class Parser {
         this.parseTable(element);
       } else if (this.$(element).hasClass('qtextml1')) {
         this.parseCodeExample(element);
+      } else if (this.$(element).is('a')) {
+        // parse outer HTML
+        const outerHTML: string = this.$.html(this.$(element))!;
+        this.parseText(outerHTML);
+      } else if (this.$(element).is('br')) {
+        this.parseText('\n');
       } else {
         this.parseText(this.$(element).html()!);
       }
@@ -225,6 +231,25 @@ export default class Parser {
       return header;
     }
 
+    if (element.hasClass('h4')) {
+      headerTitle = this.$(element).text().trim();
+      if (headerTitle !== '') {
+        header.title = headerTitle;
+        // eslint-disable-next-line func-names
+        header.render = function (renderer: Renderer) { renderer.renderH3(headerTitle); };
+        return header;
+      }
+    }
+
+    headerElement = element.find('.bold');
+    headerTitle = this.$(headerElement).text().trim();
+    if (headerTitle !== '') {
+      header.title = headerTitle;
+      // eslint-disable-next-line func-names
+      header.render = function (renderer: Renderer) { renderer.renderH4(headerTitle); };
+      return header;
+    }
+
     return header;
   }
 
@@ -240,7 +265,7 @@ export default class Parser {
     const elementHeader = element || {};
     const attributes = elementHeader.attribs || {};
     const classes = attributes.class || '';
-    return classes.split(/\s+/).some((c) => c === 'h1' || c === 'h2' || c === 'h3' || c === 'h4' || c === 'h5');
+    return classes.split(/\s+/).some((c) => c === 'h1' || c === 'h2' || c === 'h3' || c === 'h4' || c === 'h5' || c === 'bold');
   }
 
   private parseH1(element: CheerioElement) {

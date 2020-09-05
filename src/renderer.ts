@@ -21,6 +21,10 @@ export default class Renderer {
     this.contents.push(`## ${text}`);
   }
 
+  renderH4(text: string) {
+    this.contents.push(`#### ${text}`);
+  }
+
   contents: Array<string>;
 
   constructor() {
