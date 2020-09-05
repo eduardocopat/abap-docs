@@ -6,23 +6,39 @@ const fse = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 
-const sapDocsFile = new SapDocsFile(__dirname);
+let sapDocsFile = new SapDocsFile(__dirname);
 
-/*
-fse.outputFile(path.join('mkdocs.yml'), 'site_name: MkLorum', (err: any) => {
-  if (err) throw err;
-});
-*/
-
-// sapdocs/help.sap.com/doc/abapdocu_740_index_htm/7.40/en-US/abaploop_at_itab.html
-const $: CheerioStatic = sapDocsFile.load('7.4', 'abapread_table_key.html');
-const parser = new Parser($, new Renderer());
-const contents = parser.parse();
+let cheerio$: CheerioStatic = sapDocsFile.load('7.4', 'abapread_table_key.html');
+let parser = new Parser(cheerio$, new Renderer());
+let contents = parser.parse();
 
 fse.outputFile(path.join(__dirname, './docs/7.4/abapread_table_key.md'), contents, (err: any) => {
   if (!err) return;
   process.stderr.write(chalk.red(err));
   process.exitCode = 1;
 });
+
+sapDocsFile = new SapDocsFile(__dirname);
+cheerio$ = sapDocsFile.load('7.4', 'abapdelete_dbtab.html');
+parser = new Parser(cheerio$, new Renderer());
+contents = parser.parse();
+
+fse.outputFile(path.join(__dirname, './docs/7.4/abapdelete_dbtab.md'), contents, (err: any) => {
+  if (!err) return;
+  process.stderr.write(chalk.red(err));
+  process.exitCode = 1;
+});
+
+/*
+cheerio$ = sapDocsFile.load('7.4', 'abaploop_at_itab.html');
+parser = new Parser(cheerio$, new Renderer());
+contents = parser.parse();
+
+fse.outputFile(path.join(__dirname, './docs/7.4/abapread_table_key.md'), contents, (err: any) => {
+  if (!err) return;
+  process.stderr.write(chalk.red(err));
+  process.exitCode = 1;
+});
+*/
 
 process.stdout.write(chalk.green('Success\n'));

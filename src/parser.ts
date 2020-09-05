@@ -138,7 +138,7 @@ export default class Parser {
       render(renderer: Renderer) { },
     };
 
-    const headerElement = element.find('.h1');
+    let headerElement = element.find('.h1');
     let headerTitle = this.$(headerElement).text().trim();
     if (headerTitle !== '') {
       header.title = headerTitle;
@@ -147,15 +147,23 @@ export default class Parser {
       return header;
     }
 
-    headerTitle = this.$(element).find('.h2').text().trim();
+    headerElement = element.find('.h2');
+    const headerLink = this.$(headerElement).find('a');
+    const headerLinkHTML = this.$.html(headerLink);
+    headerTitle = this.$(headerElement).text().trim();
+    headerTitle = headerTitle.replace(/:/gm, '');
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
-      header.render = function (renderer: Renderer) { renderer.renderH2(headerTitle); };
+      header.render = function (renderer: Renderer) {
+        renderer.renderText(headerLinkHTML);
+        renderer.renderH2(headerTitle);
+      };
       return header;
     }
 
-    headerTitle = this.$(element).find('.h3').text().trim();
+    headerElement = element.find('.h3');
+    headerTitle = this.$(headerElement).text().trim();
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
@@ -163,7 +171,8 @@ export default class Parser {
       return header;
     }
 
-    headerTitle = this.$(element).find('.h4').text().trim();
+    headerElement = element.find('.h4');
+    headerTitle = this.$(headerElement).text().trim();
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
