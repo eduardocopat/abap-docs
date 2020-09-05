@@ -29,16 +29,15 @@ fse.outputFile(path.join(__dirname, './docs/7.4/abapdelete_dbtab.md'), contents,
   process.exitCode = 1;
 });
 
-/*
-cheerio$ = sapDocsFile.load('7.4', 'abaploop_at_itab.html');
+sapDocsFile = new SapDocsFile(__dirname);
+cheerio$ = sapDocsFile.load('7.4', 'abapmove.html');
 parser = new Parser(cheerio$, new Renderer());
 contents = parser.parse();
 
-fse.outputFile(path.join(__dirname, './docs/7.4/abapread_table_key.md'), contents, (err: any) => {
+fse.outputFile(path.join(__dirname, './docs/7.4/abapmove.md'), contents, (err: any) => {
   if (!err) return;
   process.stderr.write(chalk.red(err));
   process.exitCode = 1;
 });
-*/
 
 process.stdout.write(chalk.green('Success\n'));
