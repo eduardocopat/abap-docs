@@ -91,10 +91,55 @@ export default class Parser {
       const element = blockElements[index];
       if (this.$(element).is('ul')) {
         this.parseList(element);
+      } else if (this.$(element).is('table')) {
+        this.parseTable(element);
       } else if (this.$(element).hasClass('qtextml1')) {
         this.parseCodeExample(element);
       } else {
         this.parseText(this.$(element).html()!);
+      }
+    }
+  }
+
+  parseTable(element: CheerioElement) {
+    const tableBody = this.$(element).find('tbody');
+    let tableHeaderParsed = false;
+
+    let markdownRow;
+    let tableRow;
+    let tableCell;
+    let tableWidth;
+    for (let i = 0; i < tableBody.children().length; i++) {
+      tableRow = this.$(tableBody.children()[i]);
+      tableWidth = tableRow.children().length;
+
+      markdownRow = '';
+
+      for (let j = 0; j < tableWidth; j++) {
+        tableCell = this.$(tableRow.children()[j]);
+
+        markdownRow += '|';
+        // Don't use HTML in the header, so that we have pure text (e.g. sy-subrc is in a span)
+        let cellContent = tableHeaderParsed ? this.$(tableCell).html()! : this.$(tableCell).text()!;
+        cellContent = cellContent || '';
+
+        // Remove new lines so that markdown tables do not break
+        cellContent = cellContent.replace(/(\r\n|\n|\r)/gm, '');
+        markdownRow += cellContent;
+      }
+      // Closes row
+      markdownRow += '|';
+      this.parseText(markdownRow);
+
+      if (!tableHeaderParsed) {
+        markdownRow = '';
+        for (let j = 0; j < tableWidth; j++) {
+          markdownRow += '|';
+          markdownRow += '----';
+        }
+        markdownRow += '|';
+        tableHeaderParsed = true;
+        this.parseText(markdownRow);
       }
     }
   }

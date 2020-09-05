@@ -2,6 +2,7 @@ site_name: MkLorum
 docs_dir: docs
 theme:
   name: material
+  # name: readthedocs
   palette:
     primary: blue
 extra_javascript:
