@@ -80,6 +80,15 @@ export default class Parser {
         this.regularParseBlockElements(blockElements);
         this.parseText('</div>');
         break;
+      case 'Catchable Exceptions':
+      case 'Non-Catchable Exceptions':
+        this.parseText('###### ');
+        this.parseText('<div markdown="span" class="admonition tip">');
+        this.parseText(`<p class="admonition-title">${header.title}</p>`);
+
+        this.regularParseBlockElements(blockElements);
+        this.parseText('</div>');
+        break;
       default:
         header.render(this.renderer);
         this.regularParseBlockElements(blockElements);

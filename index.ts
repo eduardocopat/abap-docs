@@ -6,6 +6,10 @@ const fse = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 
+fse.readdirSync(__dirname).forEach((file: string) => {
+  console.log(file);
+});
+
 let sapDocsFile = new SapDocsFile(__dirname);
 
 let cheerio$: CheerioStatic = sapDocsFile.load('7.4', 'abapread_table_key.html');
