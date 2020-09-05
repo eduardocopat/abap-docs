@@ -289,10 +289,6 @@ export default class Parser {
     return classes.split(/\s+/).some((c) => c === 'h1' || c === 'h2' || c === 'h3' || c === 'h4' || c === 'h5' || c === 'bold');
   }
 
-  private parseH1(element: CheerioElement) {
-    this.renderer.renderTitle(this.$(element).text().trim());
-  }
-
   parseH2(element: CheerioElement) {
     const text: Cheerio = this.$(element).find('.bold');
     this.renderer.renderH2(text.text());
