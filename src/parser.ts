@@ -59,7 +59,8 @@ export default class Parser {
     switch (header.title) {
       case 'Syntax':
         header.render(this.renderer);
-        this.renderer.renderSyntaxBlock(blockElements.map((element) => this.$(element).html()!));
+        this.parseSyntaxBlock(blockElements);
+
         break;
       case 'Note':
       case 'Notes':
@@ -84,6 +85,14 @@ export default class Parser {
         this.regularParseBlockElements(blockElements);
         break;
     }
+  }
+
+  parseSyntaxBlock(blockElements: CheerioElement[]) {
+    const parsedElements: string[] = blockElements.map((element) => {
+      const HTML = this.$(element).html()!;
+      return this.replaceJavascriptLinks(HTML);
+    });
+    this.renderer.renderSyntaxBlock(parsedElements);
   }
 
   private regularParseBlockElements(blockElements: CheerioElement[]) {
@@ -175,9 +184,12 @@ export default class Parser {
     let parsedText = text;
 
     // https://regex101.com/r/1mionM/2
+    // Show inline code
     parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
     // Remove extra line break
     parsedText = parsedText.replace(/<br><br>/gm, '\n');
+
+    parsedText = this.replaceJavascriptLinks(parsedText);
 
     this.renderer.renderText(parsedText);
   }
@@ -246,7 +258,7 @@ export default class Parser {
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
-      header.render = function (renderer: Renderer) { renderer.renderH4(headerTitle); };
+      header.render = function (renderer: Renderer) { renderer.renderH3(headerTitle); };
       return header;
     }
 
@@ -287,5 +299,12 @@ export default class Parser {
     code = code.replace(/<br>/g, '\n');
 
     this.renderer.renderCodeBlock(code);
+  }
+
+  private replaceJavascriptLinks(text: string) {
+    if (!text) return '';
+    // https://regex101.com/r/rvTc8y/6
+    // Replace bad abap docs js links with relative links
+    return text.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.html(?:&apos;|')\)/gm, '$1../$3.html');
   }
 }
