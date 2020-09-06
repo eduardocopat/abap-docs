@@ -315,6 +315,6 @@ export default class Parser {
     if (!text) return '';
     // https://regex101.com/r/rvTc8y/6
     // Replace bad abap docs js links with relative links
-    return text.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.html(?:&apos;|')\)/gm, '$1../$3.html');
+    return text.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.html(?:&apos;|')\)/gm, '$1../$3');
   }
 }

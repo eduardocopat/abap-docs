@@ -11,7 +11,7 @@ const loader = new SapDocsFileLoader(__dirname);
 const files: Array<SapDocFile> = loader.loadFiles('7.4');
 
 files.forEach((file) => {
-  console.log(`processing${file.path}`);
+  process.stdout.write(`processing ${chalk.blue(file.path)} \n`);
   const parser = new Parser(file.cheerio, new Renderer());
   const contents = parser.parse();
 

@@ -36,10 +36,12 @@ export default class SapDocsFilesLoader {
 
     versionPath = pathLib.join(this.path, versionPath);
 
-    fse.readdirSync(versionPath).forEach((name: string) => {
-      const extension = name.split('.').pop();
+    fse.readdirSync(versionPath).forEach((file: string) => {
+      const filename = file.split('.');
+      const extension = filename.pop();
       if (extension === 'html') {
-        const path: string = pathLib.join(versionPath, name);
+        const path: string = pathLib.join(versionPath, file);
+        const name = filename.pop()!;
         files.push({
           path,
           name,
