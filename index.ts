@@ -1,11 +1,28 @@
 import Parser from './src/parser';
-import SapDocsFile from './src/sapDocsFile';
+import SapDocsFileLoader from './src/sapDocsFilesLoader';
 import Renderer from './src/renderer';
+import SapDocFile from './src/sapDocFile';
 
 const fse = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 
+const loader = new SapDocsFileLoader(__dirname);
+const files: Array<SapDocFile> = loader.loadFiles('7.4');
+
+files.forEach((file) => {
+  console.log(`processing${file.path}`);
+  const parser = new Parser(file.cheerio, new Renderer());
+  const contents = parser.parse();
+
+  fse.outputFile(path.join(__dirname, `./docs/7.4/${file.name}.md`), contents, (err: any) => {
+    if (!err) return;
+    process.stderr.write(chalk.red(err));
+    process.exitCode = 1;
+  });
+});
+
+/*
 fse.readdirSync(__dirname).forEach((file: string) => {
   console.log(file);
 });
@@ -43,5 +60,7 @@ fse.outputFile(path.join(__dirname, './docs/7.4/abapmove.md'), contents, (err: a
   process.stderr.write(chalk.red(err));
   process.exitCode = 1;
 });
+
+*/
 
 process.stdout.write(chalk.green('Success\n'));

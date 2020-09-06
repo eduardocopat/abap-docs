@@ -23,10 +23,15 @@ export default class Parser {
   parse(): string {
     const root: CheerioElement = this.$('.all')[0];
 
-    for (let index = 0; index < root.children.length; index++) {
-      if (this.isBlock(root.children[index])) {
-        this.parseBlock(root.children[index]);
-        break;
+    if (root === undefined) {
+      // If there isn't a .all root, it's probably a old page. Just parse everythning as is
+      this.parseText(this.$('body').html()!);
+    } else {
+      for (let index = 0; index < root.children.length; index++) {
+        if (this.isBlock(root.children[index])) {
+          this.parseBlock(root.children[index]);
+          break;
+        }
       }
     }
 
