@@ -14,3 +14,6 @@ src/**/*.js
 #MkDocs builds
 docs/
 site/
+
+#vagrant
+.vagrant
