@@ -1,1 +1,1 @@
-tsc && ts-node index.ts && mkdocs build
+tsc && ts-node index.ts && mkdocs -v build
