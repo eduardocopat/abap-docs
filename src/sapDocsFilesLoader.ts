@@ -26,7 +26,7 @@ export default class SapDocsFilesLoader {
 
     switch (version) {
       case '7.4': {
-        versionPath = '/abapdocu_740_index_htm/7.40/en-US';
+        versionPath = '/abapdocu_731_index_htm/7.31/en-US';
         break;
       }
       default: {

@@ -10,7 +10,20 @@ const chalk = require('chalk');
 const loader = new SapDocsFileLoader(__dirname);
 const files: Array<SapDocFile> = loader.loadFiles('7.4');
 
+const args = process.argv.slice(2);
+
+let DEBUG = false;
+
+if (args[0] === '--debug') { DEBUG = true; }
+// For debugging purposes, jsut change this to true
+
 files.forEach((file) => {
+  if (DEBUG) {
+    if (file.name !== 'abapread_table_key' && file.name !== 'abapmethods_general') {
+      return;
+    }
+  }
+
   process.stdout.write(`processing ${chalk.blue(file.path)} \n`);
   const parser = new Parser(file.cheerio, new Renderer());
   const contents = parser.parse();

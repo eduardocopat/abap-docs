@@ -1,12 +1,20 @@
 {
-    "type": "node",
-    "request": "launch",
-    "name": "Launch IT!",
-    "runtimeArgs": [
-        "-r",
-        "ts-node/register"
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug via NPM",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "debug"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        }
+        
+        
     ],
-    "args": [
-        "${workspaceFolder}/index.ts"
-    ]
 }
