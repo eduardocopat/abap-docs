@@ -14,7 +14,7 @@ export default class Renderer {
 
     block.push('</code></pre>');
 
-    this.contents.push(...block);
+    this.contents.push(block.join(''));
   }
 
   renderH3(text: string) {

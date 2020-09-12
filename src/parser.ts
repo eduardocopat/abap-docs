@@ -102,12 +102,20 @@ export default class Parser {
   }
 
   parseSyntaxBlock(blockElements: CheerioElement[]) {
-    const parsedElements: string[] = blockElements.map((element) => {
-      const HTML = this.$(element).html()!;
-      // Remove empty lines
-      HTML.replace(/<br><br>/gm, '\n');
-      return this.replaceJavascriptLinks(HTML);
-    });
+    const parsedElements: string[] = [];
+    for (let index = 0; index < blockElements.length; index++) {
+      const element = blockElements[index];
+      let HTML = this.$(element).html() || '';
+      // Skip empty first line
+
+      HTML = this.replaceJavascriptLinks(HTML);
+
+      HTML = HTML.replace(/<br><br>/gm, '');
+      if (index === 0 && HTML === '') { continue; }
+      if (index === blockElements.length - 1 && HTML === '') { continue; }
+
+      parsedElements.push(HTML);
+    }
     this.renderer.renderSyntaxBlock(parsedElements);
   }
 
