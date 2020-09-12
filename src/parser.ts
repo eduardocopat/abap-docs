@@ -104,6 +104,8 @@ export default class Parser {
   parseSyntaxBlock(blockElements: CheerioElement[]) {
     const parsedElements: string[] = blockElements.map((element) => {
       const HTML = this.$(element).html()!;
+      // Remove empty lines
+      HTML.replace(/<br><br>/gm, '\n');
       return this.replaceJavascriptLinks(HTML);
     });
     this.renderer.renderSyntaxBlock(parsedElements);

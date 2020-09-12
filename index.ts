@@ -19,7 +19,8 @@ if (args[0] === '--debug') { DEBUG = true; }
 
 files.forEach((file) => {
   if (DEBUG) {
-    if (file.name !== 'abapread_table_key' && file.name !== 'abapmethods_general' && file.name !== 'abapappend') {
+    // if (file.name !== 'abapread_table_key' && file.name !== 'abapmethods_general' && file.name !== 'abapappend') {
+    if (file.name !== 'abapappend') {
       return;
     }
   }
