@@ -12,7 +12,9 @@ src/**/*.js
 *.map
 
 #MkDocs builds
+mkdocs.yml
 docs/*
+!docs/index.md
 !docs/css
 !docs/javascript
 site/
