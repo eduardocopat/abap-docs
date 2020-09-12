@@ -7,6 +7,12 @@ ul.circlem2 {
 }
 
 /* Increases font size inside admonitions */
-.md-typeset .admonition, .md-typeset details {
-	font-size: .75rem;
+.md-typeset .admonition,
+.md-typeset details {
+    font-size: .75rem;
+}
+
+/* Adds whitespace before a grey links */
+a.grey::before {
+    content: "\00a0 ";
 }
