@@ -9,6 +9,7 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js
   - javascript/hljs.js
 extra_css:
+  # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css  
   - https://raw.githubusercontent.com/highlightjs/highlight.js/master/src/styles/github.css
   - css/abap-docs.css
 markdown_extensions:

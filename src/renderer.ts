@@ -5,7 +5,7 @@ const os = require('os');
 export default class Renderer {
   renderSyntaxBlock(elements: string[]) {
     const block: string[] = [];
-    block.push('<pre><code class="abap hljs abap-docs-syntax-block">');
+    block.push('<pre><code class="hljs abap abap-docs-syntax-block">');
 
     // index starts at 1 so we skip header
     for (let index = 1; index < elements.length; index++) {

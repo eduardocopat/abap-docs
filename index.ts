@@ -19,8 +19,12 @@ if (args[0] === '--debug') { DEBUG = true; }
 
 files.forEach((file) => {
   if (DEBUG) {
-    if (file.name !== 'abapread_table_key' && file.name !== 'abapmethods_general' && file.name !== 'abapappend') {
-    // if (file.name !== 'abapappend') {
+    if (
+      file.name !== 'abapread_table_key'
+     && file.name !== 'abapmethods_general'
+     && file.name !== 'abapappend'
+     && file.name !== 'abapdata_options'
+     && file.name !== 'abapread_table') {
       return;
     }
   }
@@ -35,46 +39,5 @@ files.forEach((file) => {
     process.exitCode = 1;
   });
 });
-
-/*
-fse.readdirSync(__dirname).forEach((file: string) => {
-  console.log(file);
-});
-
-let sapDocsFile = new SapDocsFile(__dirname);
-
-let cheerio$: CheerioStatic = sapDocsFile.load('7.4', 'abapread_table_key.html');
-let parser = new Parser(cheerio$, new Renderer());
-let contents = parser.parse();
-
-fse.outputFile(path.join(__dirname, './docs/7.4/abapread_table_key.md'), contents, (err: any) => {
-  if (!err) return;
-  process.stderr.write(chalk.red(err));
-  process.exitCode = 1;
-});
-
-sapDocsFile = new SapDocsFile(__dirname);
-cheerio$ = sapDocsFile.load('7.4', 'abapdelete_dbtab.html');
-parser = new Parser(cheerio$, new Renderer());
-contents = parser.parse();
-
-fse.outputFile(path.join(__dirname, './docs/7.4/abapdelete_dbtab.md'), contents, (err: any) => {
-  if (!err) return;
-  process.stderr.write(chalk.red(err));
-  process.exitCode = 1;
-});
-
-sapDocsFile = new SapDocsFile(__dirname);
-cheerio$ = sapDocsFile.load('7.4', 'abapmove.html');
-parser = new Parser(cheerio$, new Renderer());
-contents = parser.parse();
-
-fse.outputFile(path.join(__dirname, './docs/7.4/abapmove.md'), contents, (err: any) => {
-  if (!err) return;
-  process.stderr.write(chalk.red(err));
-  process.exitCode = 1;
-});
-
-*/
 
 process.stdout.write(chalk.green('Success\n'));

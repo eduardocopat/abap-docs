@@ -205,7 +205,7 @@ export default class Parser {
     // Show inline code
     parsedText = parsedText.replace(/<span class="qtext">.*?<\/span>/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
     // Remove extra line break
-    parsedText = parsedText.replace(/<br><br>/gm, '\n');
+    parsedText = parsedText.replace(/<br><br>/gm, ' \n ');
 
     parsedText = this.replaceJavascriptLinks(parsedText);
 
