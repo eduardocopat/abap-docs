@@ -69,36 +69,30 @@ export default class Parser {
         break;
       case 'Note':
       case 'Notes':
-        // If the header is not renderer, we somehow need to render an empty header
-        // otherwise it gets merged with the next block. Could not solve it..
-        this.parseText('###### ');
-        this.parseText('<div markdown="span" class="admonition note">');
-        this.parseText(`<p class="admonition-title">${header.title}</p>`);
-        this.regularParseBlockElements(blockElements);
-        this.parseText('</div>');
+        this.parseAdmonition('note', header.title, blockElements);
         break;
       case 'Example':
-        this.parseText('###### ');
-        this.parseText('<div markdown="span" class="admonition example">');
-        this.parseText(`<p class="admonition-title">${header.title}</p>`);
-
-        this.regularParseBlockElements(blockElements);
-        this.parseText('</div>');
+        this.parseAdmonition('example', header.title, blockElements);
         break;
       case 'Catchable Exceptions':
       case 'Non-Catchable Exceptions':
-        this.parseText('###### ');
-        this.parseText('<div markdown="span" class="admonition tip">');
-        this.parseText(`<p class="admonition-title">${header.title}</p>`);
-
-        this.regularParseBlockElements(blockElements);
-        this.parseText('</div>');
+        this.parseAdmonition('tip', header.title, blockElements);
         break;
       default:
         header.render(this.renderer);
         this.regularParseBlockElements(blockElements);
         break;
     }
+  }
+
+  parseAdmonition(type: string, title: string, contents: CheerioElement[]) {
+    // This break line before an admonition is necessary, otherwise they get
+    // wrongly merged by mkdocs. display: block is to reduce its size
+    this.parseText('<br style="display: block">');
+    this.parseText(`<div markdown="span" class="admonition ${type}">`);
+    this.parseText(`<p class="admonition-title">${title}</p>`);
+    this.regularParseBlockElements(contents);
+    this.parseText('</div>');
   }
 
   parseSyntaxBlock(blockElements: CheerioElement[]) {
