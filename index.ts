@@ -8,7 +8,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 const loader = new SapDocsFileLoader(__dirname);
-const files: Array<SapDocFile> = loader.loadFiles('7.4');
+const files: Array<SapDocFile> = loader.loadFiles('7.31');
 
 const args = process.argv.slice(2);
 
@@ -33,7 +33,7 @@ try {
     const parser = new Parser(file.cheerio, new Renderer());
     const contents = parser.parse();
 
-    fse.outputFile(path.join(__dirname, `./docs/7.4/${file.name}.md`), contents, (err: any) => {
+    fse.outputFile(path.join(__dirname, `./docs/7.31/${file.name}.md`), contents, (err: any) => {
       if (!err) return;
       process.stderr.write(chalk.red(err));
       process.exitCode = 1;

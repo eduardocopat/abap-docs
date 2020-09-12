@@ -18,3 +18,5 @@ markdown_extensions:
   - admonition  
   - pymdownx.extra
   - pymdownx.superfences
+
+## Nav will be dynamically generated
