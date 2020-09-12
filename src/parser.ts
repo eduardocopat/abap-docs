@@ -199,7 +199,7 @@ export default class Parser {
 
     // https://regex101.com/r/1mionM/2
     // Show inline code
-    parsedText = parsedText.replace(/(?<=<span class="qtext">).*?(?=<\/span>)/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
+    parsedText = parsedText.replace(/<span class="qtext">.*?<\/span>/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
     // Remove extra line break
     parsedText = parsedText.replace(/<br><br>/gm, '\n');
 
