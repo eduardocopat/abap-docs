@@ -12,7 +12,9 @@ src/**/*.js
 *.map
 
 #MkDocs builds
-docs/
+docs/*
+!docs/css
+!docs/javascript
 site/
 
 #vagrant

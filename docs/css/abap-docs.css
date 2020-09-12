@@ -1,0 +1,12 @@
+.abap-docs-syntax-block {
+    white-space: nowrap;
+}
+
+ul.circlem2 {
+    margin-left: 2em;
+}
+
+/* Increases font size inside admonitions */
+.md-typeset .admonition, .md-typeset details {
+	font-size: .75rem;
+}

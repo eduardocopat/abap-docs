@@ -197,7 +197,7 @@ export default class Parser {
     if (!text) { return; }
     let parsedText = text;
 
-    // https://regex101.com/r/1mionM/2
+    // https://regex101.com/r/1mionM/3
     // Show inline code
     parsedText = parsedText.replace(/<span class="qtext">.*?<\/span>/gm, (matched) => `<code style="display: inline;">${matched}</code>`);
     // Remove extra line break
@@ -228,7 +228,6 @@ export default class Parser {
     const headerLink = this.$(headerElement).find('a');
     const headerLinkHTML = this.$.html(headerLink);
     headerTitle = this.$(headerElement).text().trim().replace(':', '');
-    headerTitle = headerTitle.replace(/:/gm, '');
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
