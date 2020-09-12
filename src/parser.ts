@@ -227,7 +227,7 @@ export default class Parser {
     headerElement = element.find('.h2');
     const headerLink = this.$(headerElement).find('a');
     const headerLinkHTML = this.$.html(headerLink);
-    headerTitle = this.$(headerElement).text().trim();
+    headerTitle = this.$(headerElement).text().trim().replace(':', '');
     headerTitle = headerTitle.replace(/:/gm, '');
     if (headerTitle !== '') {
       header.title = headerTitle;
@@ -240,7 +240,7 @@ export default class Parser {
     }
 
     headerElement = element.find('.h3');
-    headerTitle = this.$(headerElement).text().trim();
+    headerTitle = this.$(headerElement).text().trim().replace(':', '');
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
@@ -249,7 +249,7 @@ export default class Parser {
     }
 
     headerElement = element.find('.h4');
-    headerTitle = this.$(headerElement).text().trim();
+    headerTitle = this.$(headerElement).text().trim().replace(':', '');
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
@@ -258,7 +258,7 @@ export default class Parser {
     }
 
     if (element.hasClass('h4')) {
-      headerTitle = this.$(element).text().trim();
+      headerTitle = this.$(element).text().trim().replace(':', '');
       if (headerTitle !== '') {
         header.title = headerTitle;
         // eslint-disable-next-line func-names
@@ -268,7 +268,7 @@ export default class Parser {
     }
 
     headerElement = element.find('.bold');
-    headerTitle = this.$(headerElement).text().trim();
+    headerTitle = this.$(headerElement).text().trim().replace(':', '');
     if (headerTitle !== '') {
       header.title = headerTitle;
       // eslint-disable-next-line func-names
