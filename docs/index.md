@@ -9,7 +9,7 @@ Enhanced ABAP documentation.
 - Comparable across versions.
 - Beautiful (e.g. syntax higlight read the docs theme).
 
-## Versions:
+## Versions
 
 - [7.31](./7.31/abenabap);
 - [7.40](./7.31/abenabap);
@@ -18,4 +18,4 @@ Enhanced ABAP documentation.
 
 ## Repository
 
-See more at the [GitHub repository](https://github.com/EduardoCopat/abap-docs)
+See more and report issues at the [GitHub repository](https://github.com/EduardoCopat/abap-docs)
