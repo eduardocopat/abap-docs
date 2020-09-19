@@ -12,3 +12,8 @@ ul.circlem2 {
     font-size: .75rem;
 }
 
+/* Remove edit button */
+.md-content__button {
+    visibility: hidden;
+}
+

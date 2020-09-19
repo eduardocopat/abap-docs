@@ -1,7 +1,6 @@
 /* eslint-disable no-continue */
-import TreeModel from 'tree-model';
 import Renderer from './renderer';
-import Navigation from './navigation';
+import SapDocFile from './sapDocFile';
 
 const Entities = require('html-entities').AllHtmlEntities;
 
@@ -9,6 +8,7 @@ const entities = new Entities();
 
 interface Header {
   title: string;
+  isMainTitle: boolean,
   render: (renderer: Renderer) => void;
 }
 
@@ -17,17 +17,18 @@ export default class Parser {
 
   renderer: Renderer;
 
-  constructor($: CheerioStatic, renderer: Renderer) {
-    this.$ = $;
+  allFiles: SapDocFile[];
+
+  file: SapDocFile;
+
+  constructor(file: SapDocFile, renderer: Renderer, allFiles: Array<SapDocFile>) {
+    this.$ = file.cheerio;
+    this.file = file;
     this.renderer = renderer;
+    this.allFiles = allFiles;
   }
 
   parse(): string {
-    const path: CheerioElement = this.$('.path')[0];
-    if (path) {
-      this.parsePath(path);
-    }
-
     const root: CheerioElement = this.$('.all')[0];
 
     if (root === undefined) {
@@ -98,6 +99,40 @@ export default class Parser {
         this.regularParseBlockElements(blockElements);
         break;
     }
+
+    if (header.isMainTitle) {
+      this.parseVersioning();
+      const path: CheerioElement = this.$('.path')[0];
+      if (path) {
+        this.parsePath(path);
+      }
+    }
+  }
+
+  parseVersioning() {
+    // Example:
+    // Versions: <u>7.31</u> [7.40](../cds) [7.54](../cds)
+
+    const version731 = this.renderVersion('7.31', this.findFile('7.31'), `../${this.file.name}`);
+    const version740 = this.renderVersion('7.40', this.findFile('7.40'), `../${this.file.name}`);
+    const version754 = this.renderVersion('7.54', this.findFile('7.54'), `../${this.file.name}`);
+    const versioning = `${version731} ${version740} ${version754}\n`;
+    this.renderer.renderText(versioning);
+  }
+
+  findFile(version: string): number {
+    const fileName = this.file.name;
+    return this.allFiles.findIndex((x: SapDocFile) => x.version === version && x.name === fileName);
+  }
+
+  renderVersion(version: string, index: number, link: string) {
+    if (version === this.file.version) {
+      return `<b>${version}</b>`;
+    }
+    if (index === -1) {
+      return `<s><i>${version}</i></s>`;
+    }
+    return `[${version}](${link})`;
   }
 
   parseAdmonition(type: string, title: string, contents: CheerioElement[]) {
@@ -230,6 +265,7 @@ export default class Parser {
   private determineHeader(element: Cheerio): Header {
     const header: Header = {
       title: '',
+      isMainTitle: false,
       // eslint-disable-next-line no-unused-vars
       render(renderer: Renderer) { },
     };
@@ -238,6 +274,7 @@ export default class Parser {
     let headerTitle = this.$(headerElement).text().trim();
     if (headerTitle !== '') {
       header.title = headerTitle;
+      header.isMainTitle = true;
       // eslint-disable-next-line func-names
       header.render = function (renderer: Renderer) { renderer.renderTitle(headerTitle); };
       return header;

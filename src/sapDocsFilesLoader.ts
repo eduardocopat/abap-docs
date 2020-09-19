@@ -25,6 +25,14 @@ export default class SapDocsFilesLoader {
     let versionPath: string = '';
 
     switch (version) {
+      case '7.54': {
+        versionPath = '/abapdocu_754_index_htm/7.54/en-US';
+        break;
+      }
+      case '7.40': {
+        versionPath = '/abapdocu_740_index_htm/7.40/en-US';
+        break;
+      }
       case '7.31': {
         versionPath = '/abapdocu_731_index_htm/7.31/en-US';
         break;
@@ -43,6 +51,7 @@ export default class SapDocsFilesLoader {
         const path: string = pathLib.join(versionPath, file);
         const name = filename.pop()!;
         files.push({
+          version,
           path,
           name,
           cheerio: cheerio.load(fs.readFileSync(path)),
