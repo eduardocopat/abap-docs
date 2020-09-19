@@ -11,9 +11,9 @@ Enhanced ABAP documentation.
 
 ## Versions
 
-- [7.31](./7.31/abenabap);
-- [7.40](./7.31/abenabap);
-- [7.54](./7.31/abenabap);
+- [7.31](./7.31/abenabap)
+- [7.40](./7.31/abenabap)
+- [7.54](./7.31/abenabap)
 
 
 ## Repository
