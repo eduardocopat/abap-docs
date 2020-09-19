@@ -12,7 +12,3 @@ ul.circlem2 {
     font-size: .75rem;
 }
 
-/* Adds whitespace before a grey links */
-a.grey::before {
-    content: "\00a0 ";
-}

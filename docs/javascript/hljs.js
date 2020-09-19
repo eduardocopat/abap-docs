@@ -1,5 +1,5 @@
 
-//See license https://github.com/highlightjs/highlightjs-sap-abap
+//From https://github.com/highlightjs/highlightjs-sap-abap. See license at repo.
 hljs.registerLanguage('abap', function (hljs) {
     return {
         case_insensitive: true,

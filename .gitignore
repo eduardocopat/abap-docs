@@ -2,7 +2,8 @@
 node_modules/
 
 #SAP HTML docs
-sapdocs/
+sapdocs/*
+!sapdocs/download.sh
 
 #TypeScript
 tsconfig.tsbuildinfo

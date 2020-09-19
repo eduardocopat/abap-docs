@@ -1,5 +1,7 @@
 /* eslint-disable no-continue */
+import TreeModel from 'tree-model';
 import Renderer from './renderer';
+import Navigation from './navigation';
 
 const Entities = require('html-entities').AllHtmlEntities;
 
@@ -21,10 +23,15 @@ export default class Parser {
   }
 
   parse(): string {
+    const path: CheerioElement = this.$('.path')[0];
+    if (path) {
+      this.parsePath(path);
+    }
+
     const root: CheerioElement = this.$('.all')[0];
 
     if (root === undefined) {
-      // If there isn't a .all root, it's probably a old page. Just parse everythning as is
+      // If there isn't a .all root, it's probably a old page. Just parse every thing as is
       this.parseText(this.$('body').html()!);
     } else {
       for (let index = 0; index < root.children.length; index++) {
@@ -36,6 +43,14 @@ export default class Parser {
     }
 
     return this.renderer.getContents();
+  }
+
+  parsePath(path: CheerioElement) {
+    let pathHTML = this.$(path).html()!;
+
+    // Remove last arrow
+    pathHTML = pathHTML.replace(/&#x219([^_]*)$/, '');
+    this.parseText(`<small>${pathHTML}</small>`);
   }
 
   parseBlock(element: CheerioElement) {
@@ -315,9 +330,15 @@ export default class Parser {
   }
 
   private replaceJavascriptLinks(text: string) {
+    let replacedText = text;
     if (!text) return '';
     // https://regex101.com/r/rvTc8y/6
     // Replace bad abap docs js links with relative links
-    return text.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.html(?:&apos;|')\)/gm, '$1../$3');
+    // HTML
+    replacedText = text.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.html(?:&apos;|')\)/gm, '$1../$3');
+    // HTM
+    replacedText = replacedText.replace(/(<a href=")(javascript:call_link\((?:&apos;|'))(.*?)\.htm(?:&apos;|')\)/gm, '$1../$3');
+    return replacedText;
+    // HTM
   }
 }

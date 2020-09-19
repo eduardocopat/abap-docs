@@ -1,17 +1,13 @@
+import fse from 'fs-extra';
+import path from 'path';
+import chalk from 'chalk';
 import Parser from './src/parser';
 import SapDocsFileLoader from './src/sapDocsFilesLoader';
 import Renderer from './src/renderer';
 import SapDocFile from './src/sapDocFile';
-
-const fse = require('fs-extra');
-const path = require('path');
-const chalk = require('chalk');
-
-const loader = new SapDocsFileLoader(__dirname);
-const files: Array<SapDocFile> = loader.loadFiles('7.31');
+import Navigation from './src/navigation';
 
 const args = process.argv.slice(2);
-
 let DEBUG = false;
 
 if (args[0] === '--debug') { DEBUG = true; }
@@ -19,12 +15,15 @@ if (args[0] === '--debug') { DEBUG = true; }
 try {
   files.forEach((file) => {
     if (DEBUG) {
-      if (
+      if (file.name !== 'test'
+      /*
         file.name !== 'abapread_table_key'
         && file.name !== 'abapmethods_general'
         && file.name !== 'abapappend'
         && file.name !== 'abapdata_options'
-        && file.name !== 'abapread_table') {
+        && file.name !== 'abapread_table'
+        */
+      ) {
         return;
       }
     }
@@ -32,6 +31,7 @@ try {
     process.stdout.write(`processing ${chalk.blue(file.path)} \n`);
     const parser = new Parser(file.cheerio, new Renderer());
     const contents = parser.parse();
+    // parser.parseNavigation(root731);
 
     fse.outputFile(path.join(__dirname, `./docs/7.31/${file.name}.md`), contents, (err: any) => {
       if (!err) return;
