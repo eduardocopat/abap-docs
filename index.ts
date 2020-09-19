@@ -12,7 +12,7 @@ if (args[0] === '--debug') { DEBUG = true; }
 
 const loader = new SapDocsFileLoader(__dirname);
 
-const files: Array<SapDocFile> = [...loader.loadFiles('7.54'), ...loader.loadFiles('7.42'), ...loader.loadFiles('7.31')];
+const files: Array<SapDocFile> = [...loader.loadFiles('7.54'), ...loader.loadFiles('7.40'), ...loader.loadFiles('7.31')];
 
 const parseFiles = function parseFiles(version: string) {
   // For debugging purposes, jsut change this to true
@@ -48,6 +48,12 @@ const parseFiles = function parseFiles(version: string) {
 
 fse.emptyDirSync(path.join(__dirname, './docs/7.31'));
 parseFiles('7.31');
+
+fse.emptyDirSync(path.join(__dirname, './docs/7.40'));
+parseFiles('7.40');
+
+fse.emptyDirSync(path.join(__dirname, './docs/7.54'));
+parseFiles('7.54');
 
 try {
   fse.copySync('base-mkdocs.yml', 'mkdocs.yml');
