@@ -7,7 +7,7 @@ Enhanced ABAP documentation.
 - Navigable and sharable (i.e. you can open new tabs, instead of the same-page navigation in standard docs).
 - Searchable. 
 - Comparable across versions.
-- Beautiful (e.g. syntax higlight read the docs theme).
+- Beautiful (e.g. syntax highlight, material theme).
 
 ## How it works
 
@@ -17,7 +17,7 @@ Enhanced ABAP documentation.
 4. The documentation is deployed to GitHub pages.
 
 
-## Installing and contributing
+## Installing
 ### Requirements
 - Node 12.13.1+
 - Python 3.8.1+
@@ -37,4 +37,4 @@ Enhanced ABAP documentation.
 
 ABAP and SAP NetWeaver are Copyright by SAP AG. All rights reserved.
 
-For this repository master branch code, see [License](LICENSE.md)
+For this repository master branch code, see [License](LICENSE.md).

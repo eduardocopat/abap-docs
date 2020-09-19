@@ -7,7 +7,7 @@ Enhanced ABAP documentation.
 - Navigable and sharable (i.e. you can open new tabs, instead of the same-page navigation in standard docs).
 - Searchable. 
 - Comparable across versions.
-- Beautiful (e.g. syntax higlight read the docs theme).
+- Beautiful (e.g. syntax highlight, material theme).
 
 ## Versions
 
