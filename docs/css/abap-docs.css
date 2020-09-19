@@ -17,3 +17,8 @@ ul.circlem2 {
     visibility: hidden;
 }
 
+
+/* hide footer */
+.md-footer-nav {
+    visibility: hidden;
+}
