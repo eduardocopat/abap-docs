@@ -1,4 +1,3 @@
-/* TODO: import from node to generate this */
 .abap-docs-syntax-block {
     white-space: nowrap;
 }
@@ -8,6 +7,18 @@ ul.circlem2 {
 }
 
 /* Increases font size inside admonitions */
-.md-typeset .admonition, .md-typeset details {
-	font-size: .75rem;
+.md-typeset .admonition,
+.md-typeset details {
+    font-size: .75rem;
+}
+
+/* Remove edit button */
+.md-content__button {
+    visibility: hidden;
+}
+
+
+/* hide footer */
+.md-footer-nav {
+    visibility: hidden;
 }
