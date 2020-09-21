@@ -15,7 +15,7 @@
     
     
       
-        <title>Method Calls - ABAP docs</title>
+        <title>Abenmethod calls - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Method Calls
+              Abenmethod calls
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,13 @@
                   
                 
                 
-                <h1 id="method-calls">Method Calls</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;&#x2192;&#xA0;
+<a href="../abencall_processing_blocks" class="blue">Calling Processing Blocks</a>&#xA0;&#x2192;&#xA0;
+<a href="../abencall_procedures" class="blue">Calling Procedures</a>&#xA0;</small></p>
+<h1 id="method-calls">Method Calls</h1>
 <p>There are two types of method call, static method calls and dynamic method calls. In static method calls,
 the name of the method must be specified in full in the program. In dynamic method calls, the full name of the method or a part of the name is determined at runtime.</p>
 <p>When an instance method is called using a reference variable and the static type of the reference variable
@@ -275,13 +293,8 @@ is a superclass of the dynamic type, the dynamic method call can be used to call
 </ul>
 
 <p>An <a href="../abapcall_method_static" class="blue">obsolete syntax variant</a> also exists where static method calls are still introduced using <code style="display: inline;"><span class="qtext">CALL METHOD</span></code>.  </p>
-<p><s><i>7.31</i></s> <a href="../abenmethod_calls">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;&#x2192;&#xA0;
-<a href="../abencall_processing_blocks" class="blue">Calling Processing Blocks</a>&#xA0;&#x2192;&#xA0;
-<a href="../abencall_procedures" class="blue">Calling Procedures</a>&#xA0;</small></p>
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenmethod_calls">7.40</a> | <b>7.54</b></p>
 <h3 id="system-fields">System Fields</h3>
 <p>The system field <code style="display: inline;"><span class="qtext">sy-subrc</span></code> is set to 0 when a method is called. If a
 <a href="../abenexceptions_non_class" class="blue">non-class-based exception</a> is raised that was handled by the assignment of a value, <code style="display: inline;"><span class="qtext">sy-subrc</span></code> is set to this value.</p>
@@ -302,41 +315,6 @@ is a superclass of the dynamic type, the dynamic method call can be used to call
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenmethod_call_guidl/" title="Method Calls" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Method Calls
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenmethod_calls_dynamic/" title="Dynamic Method Call" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Dynamic Method Call
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

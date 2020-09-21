@@ -15,7 +15,7 @@
     
     
       
-        <title>Logical Databases - Structure - ABAP docs</title>
+        <title>Abenldb structure - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Logical Databases - Structure
+              Abenldb structure
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="logical-databases-structure">Logical Databases - Structure</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_obsolete" class="blue">Obsolete Language Elements</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendata_storage_obsolete" class="blue">Obsolete Processing of External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenldb" class="blue">Logical Databases (Obsolete)</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenldb_oview" class="blue">Logical Databases - Components</a>&#xA0;</small></p>
+<h1 id="logical-databases-structure">Logical Databases - Structure</h1>
 <p>The structure of logical databases generally maps the foreign key relationships of hierarchical tables in the database. The structure of logical databases is tree-like and defined as follows:</p>
 <ul>
 
@@ -291,15 +310,9 @@ the associated event blocks are processed in the order defined by the hierarchic
 does not contain a <code style="display: inline;"><span class="qtext">GET</span></code> statement for every node in a logical database, all
 nodes are processed that are located in the path from the root to the nodes named by <code style="display: inline;"><span class="qtext">GET</span></code> statements.</p>
 <p>If called using the function module <span class="lnkgrey">LDB_PROCESS</span>, the read depth of the logical database is defined using an interface parameter.</p>
-<p><s><i>7.31</i></s> <a href="../abenldb_structure">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_obsolete" class="blue">Obsolete Language Elements</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendata_storage_obsolete" class="blue">Obsolete Processing of External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenldb" class="blue">Logical Databases (Obsolete)</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenldb_oview" class="blue">Logical Databases - Components</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenldb_structure">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>LFA1 is the root node and LFBK and LFB1 are branches of LFA1; LFC1 is a branch of LFB1.</p>
@@ -325,41 +338,6 @@ program, the <code style="display: inline;"><span class="qtext">GET</span></code
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenldb_statements/" title="Statements in Logical Databases" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Statements in Logical Databases
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenldb_usage/" title="Logical Databases - Use" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Logical Databases - Use
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

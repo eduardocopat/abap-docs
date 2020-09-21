@@ -15,7 +15,7 @@
     
     
       
-        <title>string_exp - Performance Note - ABAP docs</title>
+        <title>Abenstring expr perfo - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              string_exp - Performance Note
+              Abenstring expr perfo
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,14 @@
                   
                 
                 
-                <h1 id="string_exp-performance-note">string_exp - Performance Note</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_string" class="blue">Character String and Byte String Processing</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenstring_processing_expr_func" class="blue">Expressions and Functions for String Processing</a>&#xA0;&#x2192;&#xA0;
+<a href="../abapcompute_string" class="blue">string_exp - String Expressions</a>&#xA0;</small></p>
+<h1 id="string_exp-performance-note">string_exp - Performance Note</h1>
 <p>If the right side of an <a href="../abenequals_string_expr" class="blue">assignment</a> appends strings in a
 <a href="../abapcompute_string" class="blue">string expression</a> to a variable <code style="display: inline;"><span class="qtext">str</span></code>
 with the type <code style="display: inline;"><span class="qtext">string</span></code> specified on the left side of the assignment, the variable is used directly in the following cases without producing a subtotal.</p>
@@ -326,15 +345,9 @@ with the type <code style="display: inline;"><span class="qtext">string</span></
 often, we strongly recommend only using optimizable forms within loops, because otherwise the runtime
 would increase quadratically with the number of iterations. In loops, the results of expressions and
 functions that can only be determined there should be assigned to helper variables <code style="display: inline;"><span class="qtext">dobj1</span></code>, <code style="display: inline;"><span class="qtext">dobj2</span></code>, and so on, and these should be used.</p>
-<p><s><i>7.31</i></s> <s><i>7.40</i></s> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_string" class="blue">Character String and Byte String Processing</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenstring_processing_expr_func" class="blue">Expressions and Functions for String Processing</a>&#xA0;&#x2192;&#xA0;
-<a href="../abapcompute_string" class="blue">string_exp - String Expressions</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <s><i>7.40</i></s> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>If optimization is deactivated, the runtime is related quadratically to the number of iterations, since
@@ -385,41 +398,6 @@ the length of the string in the subtotal increases in proportion with the number
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenstring_expr_glosry/" title="character string expression" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                character string expression
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenstring_expression_glosry/" title="string expression" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                string expression
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

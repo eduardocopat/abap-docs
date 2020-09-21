@@ -15,7 +15,7 @@
     
     
       
-        <title>Components of the Transaction Service - ABAP docs</title>
+        <title>Abenos transaction comps - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Components of the Transaction Service
+              Abenos transaction comps
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -269,7 +281,14 @@
                   
                 
                 
-                <h1 id="components-of-the-transaction-service">Components of the Transaction Service</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services_transact" class="blue">transaction service</a>&#xA0;</small></p>
+<h1 id="components-of-the-transaction-service">Components of the Transaction Service</h1>
 <p>An object-oriented transaction is represented by a transaction object that is managed by a transaction
 manger (which is also an object). The transaction manager represents the transaction service with respect to the ABAP program.</p>
 <p>To create a transaction manager, the static method GET_TRANSACTION_MANAGER of the general system service class <span class="lnkgrey">CL_OS_SYSTEM</span> is required. The
@@ -301,14 +320,8 @@ variables. Instead the program accesses the Transaction Manager and the transact
 </ul>
 
 <p><a name="@@ITOC@@ABENOS_TRANSACTION_COMPS_1"></a>
-<s><i>7.31</i></s> <a href="../abenos_transaction_comps">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services_transact" class="blue">transaction service</a>&#xA0;</small></p>
+Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenos_transaction_comps">7.40</a> | <b>7.54</b></p>
 <h2 id="relevant-methods-of-the-system-service">Relevant Methods of the System Service</h2>
 <p>Most of the components of the system service class <span class="lnkgrey">CL_OS_SYSTEM</span> are used
 internally by the Object Services. Two methods must be used in an application program to be able to work explicitly with object-oriented transactions.</p>
@@ -604,41 +617,6 @@ The event is raised at the actual end of a transaction, regardless of whether it
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenos_transaction_check/" title="Checking Agents" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Checking Agents
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenos_transaction_luw/" title="Transaction Service and Updates" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Transaction Service and Updates
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>Open SQL - SAP Buffering - ABAP docs</title>
+        <title>Abensap puffering - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Open SQL - SAP Buffering
+              Abensap puffering
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="open-sql-sap-buffering">Open SQL - SAP Buffering</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP - Database Accesses</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenopensql" class="blue">Open SQL</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenopen_sql_oview" class="blue">Open SQL - Overview</a>&#xA0;</small></p>
+<h1 id="open-sql-sap-buffering">Open SQL - SAP Buffering</h1>
 <p>When accessing a database table using Open SQL, <span class="lnkgrey">SAP buffering</span> is usually
 active if it is defined for the database table in question. The definition of a database table in ABAP Dictionary determines whether and how it is buffered. There are three buffering types:</p>
 <ul>
@@ -371,15 +390,9 @@ The next read access to the changed entry reloads it into the buffer and removes
 
 </ul>
 
-<p><b>7.31</b> <a href="../abensap_puffering">7.40</a> <a href="../abensap_puffering">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP - Database Accesses</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenopensql" class="blue">Open SQL</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenopen_sql_oview" class="blue">Open SQL - Overview</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abensap_puffering">7.40</a> | <a href="../../7.54/abensap_puffering">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>The avoidance of the SAP buffer using the additions above should be noted for access to buffered data
@@ -400,41 +413,6 @@ statement you should always use the <code style="display: inline;"><span class="
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensap_nw_java_glosry/" title="AS Java" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                AS Java
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abensap_spool_system_glosry/" title="SAP spool system" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                SAP spool system
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

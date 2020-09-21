@@ -15,7 +15,7 @@
     
     
       
-        <title>RFC Context - ABAP docs</title>
+        <title>Abenrfc context - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              RFC Context
+              Abenrfc context
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,13 @@
                   
                 
                 
-                <h1 id="rfc-context">RFC Context</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenrfc" class="blue">Remote Function Call</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenrfc_intro_oview" class="blue">RFC Overview</a>&#xA0;</small></p>
+<h1 id="rfc-context">RFC Context</h1>
 <p>Every remote call of a function module that uses an RFC interface defines its own
 <a href="../abenuser_session_glosry" class="grey" title="Glossary Entry">user session</a> in the target system. The function group of the function module is loaded into an
 <a href="../abeninternal_session_glosry" class="grey" title="Glossary Entry">internal mode</a> of the context and is kept there, so that when function modules with the same
@@ -240,13 +258,8 @@ group are called repeatedly, the global data belonging to this function group ca
 the same time. When functions are called in an external system, the RFC Library API simulates this behavior.
 A connection and its context is retained until it is explicitly closed, or until the calling program
 is finished. The function module <span class="lnkgrey">RFC_CONNECTION_CLOSE</span> or API functions RfcAbort and RfcClose are used to explicitly close a connection.</p>
-<p><b>7.31</b> <a href="../abenrfc_context">7.40</a> <a href="../abenrfc_context">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenrfc" class="blue">Remote Function Call</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenrfc_intro_oview" class="blue">RFC Overview</a>&#xA0;</small></p>
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abenrfc_context">7.40</a> | <a href="../../7.54/abenrfc_context">7.54</a></p>
                 
               
               
@@ -261,41 +274,6 @@ is finished. The function module <span class="lnkgrey">RFC_CONNECTION_CLOSE</spa
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenrfc_client_glosry/" title="RFC client" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                RFC client
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenrfc_destination/" title="RFC Destination" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                RFC Destination
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

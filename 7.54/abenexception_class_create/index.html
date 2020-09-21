@@ -15,7 +15,7 @@
     
     
       
-        <title>Creating Exception Classes - ABAP docs</title>
+        <title>Abenexception class create - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Creating Exception Classes
+              Abenexception class create
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="creating-exception-classes">Creating Exception Classes</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_flow_logic" class="blue">Program Flow Logic</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_exceptions" class="blue">Exception Handling</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenexceptions" class="blue">Class-Based Exceptions</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenexceptions_classes" class="blue">Exception Classes</a>&#xA0;</small></p>
+<h1 id="creating-exception-classes">Creating Exception Classes</h1>
 <p>Exception classes can be defined globally in <a href="../abenclass_library_glosry" class="grey" title="Glossary Entry">
 Class Builder</a> or locally in a program. The names of global exception classes are prefixed with CX_
 or, in the case of exception classes created in customer systems, YCX_ or ZCX_. There is a set of predefined
@@ -283,15 +302,9 @@ blocks, in <code style="display: inline;"><span class="qtext">CLEANUP</span></co
 <p>For global exception classes, Class Builder generates a non-modifiable instance constructor that has
 optional input parameters for all non-private attributes and that sets these attributes to the value
 of the input parameters. The ID of the required exception text can be passed to TEXTID. In the case of local exception classes, there are no special rules for the instance constructor.</p>
-<p><a href="../abenexception_class_create">7.31</a> <a href="../abenexception_class_create">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_flow_logic" class="blue">Program Flow Logic</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_exceptions" class="blue">Exception Handling</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenexceptions" class="blue">Class-Based Exceptions</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenexceptions_classes" class="blue">Exception Classes</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenexception_class_create">7.31</a> | <a href="../../7.40/abenexception_class_create">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -325,41 +338,6 @@ class, and the exception cannot be handled there, this or (if propagation is uns
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenexception_category_guidl/" title="Exception Categories" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Exception Categories
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenexception_class_glosry/" title="exception class" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                exception class
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

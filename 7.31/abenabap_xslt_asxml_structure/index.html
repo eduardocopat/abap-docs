@@ -15,7 +15,7 @@
     
     
       
-        <title>asXML - Mapping of Structures - ABAP docs</title>
+        <title>Abenabap xslt asxml structure - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              asXML - Mapping of Structures
+              Abenabap xslt asxml structure
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="asxml-mapping-of-structures">asXML - Mapping of Structures</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xslt_asxml" class="blue">asXML - Canonical XML Representation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xslt_asxml_named" class="blue">asXML - Mapping of ABAP Data Types</a>&#xA0;</small></p>
+<h1 id="asxml-mapping-of-structures">asXML - Mapping of Structures</h1>
 <p>The asXML representation of structures is significant mainly for XSL transformations. In simple transformations,
 this representation is important only when using the statement <a href="../abenst_tt_copy" class="blue"><span class="qtext400">tt:copy</span></a>.</p>
 <p>The components of an ABAP structure are represented in asXML as a sequence of subelements of the structure
@@ -239,15 +258,9 @@ element. The content of each subelement corresponds to the canonical representat
 value. The name of each subelement is the name of the corresponding component. During serialization,
 the subelements are represented in the order of the components in the structure. During the deserialization
 of the asXML representation of a structure, the order of the subelements is not important and redundant XML elements are ignored. Components of the structure for which there are no subelements remain initial.</p>
-<p><b>7.31</b> <a href="../abenabap_xslt_asxml_structure">7.40</a> <a href="../abenabap_xslt_asxml_structure">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xslt_asxml" class="blue">asXML - Canonical XML Representation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xslt_asxml_named" class="blue">asXML - Mapping of ABAP Data Types</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abenabap_xslt_asxml_structure">7.40</a> | <a href="../../7.54/abenabap_xslt_asxml_structure">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>See <a href="../abenasxml_structure_abexa" class="blue">asXML, Mapping of Structures</a></p>
@@ -266,41 +279,6 @@ of the asXML representation of a structure, the order of the subelements is not 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_xslt_asxml_schema/" title="asXML - Mapping Additional XML Schema Data Types" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                asXML - Mapping Additional XML Schema Data Types
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_xslt_asxml_table/" title="asXML - Mapping of Internal Tables" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                asXML - Mapping of Internal Tables
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

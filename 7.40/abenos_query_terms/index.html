@@ -15,7 +15,7 @@
     
     
       
-        <title>Query Service Overview - ABAP docs</title>
+        <title>Abenos query terms - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Query Service Overview
+              Abenos query terms
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="query-service-overview">Query Service Overview</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP Database Accesses</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services_query" class="blue">query service</a>&#xA0;</small></p>
+<h1 id="query-service-overview">Query Service Overview</h1>
 <p>A query is used to search for persistent objects in the database using conditions and to create the corresponding instances of the persistent class in the ABAP program.</p>
 <p>A query is implemented by an object (query object) that implements the interface <span class="lnkgrey">IF_OS_QUERY</span> and is created by a query manager.</p>
 <p>A query is a logical expression that compares the attributes of a persistent class with parameters or values that comprise the
@@ -241,15 +260,9 @@
 <p>The query itself is merely a container for the filter condition and the sort condition. A query is executed
 by calling the interface method IF_OS_CA_PERSISTENCY~GET_PERSISTENT_BY_QUERY in the class agent of a
 persistent class. Similarly, the result of a query&#x2019;s execution is not bound to the query, but is returned by the class actor&#x2019;s method as a table of references.</p>
-<p><s><i>7.31</i></s> <b>7.40</b> <a href="../abenos_query_terms">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP Database Accesses</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services_query" class="blue">query service</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <b>7.40</b> | <a href="../../7.54/abenos_query_terms">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>When the result quantity of a query is determined, the changes that are made in the current transaction to persistent objects are not considered. The query is executed directly in the database.</p>
@@ -268,41 +281,6 @@ persistent class. Similarly, the result of a query&#x2019;s execution is not bou
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenos_query_sort_cond/" title="Sort Conditions" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Sort Conditions
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenos_transaction_abexa/" title="Transaction Service" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Transaction Service
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

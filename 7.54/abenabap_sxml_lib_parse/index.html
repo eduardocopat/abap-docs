@@ -15,7 +15,7 @@
     
     
       
-        <title>sXML Library - Parsing - ABAP docs</title>
+        <title>Abenabap sxml lib parse - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              sXML Library - Parsing
+              Abenabap sxml lib parse
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,14 @@
                   
                 
                 
-                <h1 id="sxml-library-parsing">sXML Library - Parsing</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small></p>
+<h1 id="sxml-library-parsing">sXML Library - Parsing</h1>
 <p>XML data can be read using sXML Library or simply have its <span class="lnkgrey">syntax checked</span> by being associated with an XML reader and its methods. A reader like this is &quot;validating&quot;, meaning that invalid XML data raises an
 <a href="../abenabap_sxml_lib_exceptions" class="blue">exception</a>. It interprets the XML data as a hierarchical tree-like structure where each token is represented by a node assigned uniquely to a subnode (see
 <a href="http://www.w3.org/TR/xml-infoset/" target="blank" class="blue">W3C Information Set</a>). An element with a literal value, for example, is interpreted as follows:</p>
@@ -345,15 +364,9 @@ the XOP format only. Instructions on standardization and handling empty space ca
 of a reader is controlled while parsing using its methods. The actions permitted by a reader are specified
 by its current reading position. For example, a reader located at the end of the parsed XML data can
 no longer be used as an XML source of the statement <code style="display: inline;"><span class="qtext">CALL TRANSFORMATION</span></code>. No method exists that can restore the reader to its initial state. A new reader is created instead.</p>
-<p><s><i>7.31</i></s> <a href="../abenabap_sxml_lib_parse">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenabap_sxml_lib_parse">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -399,41 +412,6 @@ various simple ways of checking the validity of a subtree or tree or of copying 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_sxml_lib_object_types/" title="sXML Library - Classes and Interfaces" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                sXML Library - Classes and Interfaces
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_sxml_lib_parse_iterative/" title="sXML Library - Token-Based Parsing" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                sXML Library - Token-Based Parsing
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

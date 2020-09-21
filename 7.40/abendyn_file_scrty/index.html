@@ -15,7 +15,7 @@
     
     
       
-        <title>Directory Traversal - ABAP docs</title>
+        <title>Abendyn file scrty - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Directory Traversal
+              Abendyn file scrty
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,11 @@
                   
                 
                 
-                <h1 id="directory-traversal">Directory Traversal</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small></p>
+<h1 id="directory-traversal">Directory Traversal</h1>
 <p>Physical file names can be specified as the content of a character-like data object in the statements and system class of the
 <a href="../abenfile_interface_glosry" class="grey" title="Glossary Entry">ABAP file interface</a>.
 If some or all of this content originates outside of the calling program, there is a risk that files or file paths are accessed by unauthorized sources (this is known as
@@ -253,12 +269,9 @@ DATASET</span></a> and <a href="../abapdelete_dataset" class="blue"><code style=
 be validated</a>. This can be a self-programmed validation or the function module <span class="lnkgrey">FILE_VALIDATE_NAME</span> can be used. This function module checks whether a physical file name matches a
 <a href="../abenlogical_filename_glosry" class="grey" title="Glossary Entry">logical file name</a>
 or whether it is a valid directory. One prerequisite is that the matching file names or logical paths were created using the transactions <span class="lnkgrey">FILE</span> or <span class="lnkgrey">SF01</span>.</p>
-<p><s><i>7.31</i></s> <b>7.40</b> <a href="../abendyn_file_scrty">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <b>7.40</b> | <a href="../../7.54/abendyn_file_scrty">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -310,41 +323,6 @@ names or paths required by the statements are constructed using the function mod
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abendyn_call_scrty/" title="Dynamic Calls" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Dynamic Calls
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abendynamic_data_object_glosry/" title="Dynamic data object" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Dynamic data object
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>System Time Zone and User Time Zone - ABAP docs</title>
+        <title>Abensystem user time zones - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              System Time Zone and User Time Zone
+              Abensystem user time zones
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,13 @@
                   
                 
                 
-                <h1 id="system-time-zone-and-user-time-zone">System Time Zone and User Time Zone</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendate_time_processing" class="blue">Date and Time Processing</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendate_time_oview" class="blue">Date, Time, Time Stamp, and Time Zones</a>&#xA0;</small></p>
+<h1 id="system-time-zone-and-user-time-zone">System Time Zone and User Time Zone</h1>
 <p>Two <a href="../abentime_zone_glosry" class="grey" title="Glossary Entry">time zones</a> are preconfigured in AS ABAP, the
 <a href="../abensystem_time_zone_glosry" class="grey" title="Glossary Entry">system time zone</a> and the <a href="../abenuser_time_zone_glosry" class="grey" title="Glossary Entry">user time zone</a>.</p>
 <ul>
@@ -281,14 +299,9 @@ Values</span> tab, however only the user time zone can be changed here. This req
 take effect. If no user time zone is defined in the user master record, or the specified time zone is
 invalid or inactive, the default value from the column TZONEDEF in the database table <span class="lnkgrey">TTZCU</span>
 is used. If it is invalid or inactive, the system field <code style="display: inline;"><span class="qtext">sy-zonlo</span></code> is filled with blanks.</p>
-<p><a href="../abensystem_user_time_zones">7.31</a> <a href="../abensystem_user_time_zones">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendate_time_processing" class="blue">Date and Time Processing</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendate_time_oview" class="blue">Date, Time, Time Stamp, and Time Zones</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abensystem_user_time_zones">7.31</a> | <a href="../../7.40/abensystem_user_time_zones">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>The current client&apos;s system time zone can be read using function module <span class="lnkgrey">GET_SYSTEM_TIMEZONE</span>.</p>
@@ -380,41 +393,6 @@ STAMP</span></a>. An initial value for the time zone is set in <code style="disp
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensystem_time_zone_glosry/" title="system time zone" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                system time zone
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abentab_area_glosry/" title="tab area" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                tab area
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

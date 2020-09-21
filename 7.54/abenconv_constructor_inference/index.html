@@ -15,7 +15,7 @@
     
     
       
-        <title>CONV - Type Inference for Actual Parameters - ABAP docs</title>
+        <title>Abenconv constructor inference - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              CONV - Type Inference for Actual Parameters
+              Abenconv constructor inference
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,13 @@
                   
                 
                 
-                <h1 id="conv-type-inference-for-actual-parameters">CONV - Type Inference for Actual Parameters</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenvalue_assignments" class="blue">Assignments</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenconstructor_expression_conv" class="blue">CONV - Conversion Operator</a>&#xA0;</small></p>
+<h1 id="conv-type-inference-for-actual-parameters">CONV - Type Inference for Actual Parameters</h1>
 <p>If a constructor expression</p>
 <p><code style="display: inline;"><span class="qtext"><a href="../abenconstructor_expression_conv" class="blue">CONV</a> #( <i class="bn">[</i><a href="../abaplet" class="blue">let_exp</a><i class="bn">]</i> dobj )</span></code></p>
 <p>is passed to generically typed formal parameters as an actual parameter using the character <code style="display: inline;"><span class="qtext">#</span></code>
@@ -348,14 +366,9 @@ places with the length 16 in arguments of the types <code style="display: inline
 <p>Other combinations of generic formal parameter types and arguments cannot be made more concrete in any
 meaningful way and produce a syntax error (with the exception of table types that are explicitly generic with respect to their secondary table keys).</p>
 <p>Syntax warnings that can be hidden using pragmas also indicate any redundant conversions produced by the rules above.</p>
-<p><s><i>7.31</i></s> <s><i>7.40</i></s> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenvalue_assignments" class="blue">Assignments</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenconstructor_expression_conv" class="blue">CONV - Conversion Operator</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <s><i>7.40</i></s> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>Rules apply when deriving the type in cases where <code style="display: inline;"><span class="qtext">#</span></code> is specified for actual
@@ -395,41 +408,6 @@ ENDCLASS. <br> <br>START-OF-SELECTION. <br>&#xA0;&#xA0;FIELD-SYMBOLS &lt;fs&gt; 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenconv_constructor_enum/" title="CONV - Conversion of Enumerated Types" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                CONV - Conversion of Enumerated Types
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenconv_enum_abexa/" title="Conversion Operator, Enumerated Types" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Conversion Operator, Enumerated Types
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

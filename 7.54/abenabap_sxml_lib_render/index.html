@@ -15,7 +15,7 @@
     
     
       
-        <title>sXML Library - Rendering - ABAP docs</title>
+        <title>Abenabap sxml lib render - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              sXML Library - Rendering
+              Abenabap sxml lib render
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,7 +267,14 @@
                   
                 
                 
-                <h1 id="sxml-library-rendering">sXML Library - Rendering</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small></p>
+<h1 id="sxml-library-rendering">sXML Library - Rendering</h1>
 <p>To create XML data using sXML Library, the content is passed to a XML writer. A writer of the type is &quot;validating&quot;, which means that invalid actions, such as attempts to add an attribute to a value node, raise an
 <a href="../abenabap_sxml_lib_exceptions" class="blue">exception</a>. An XML writer creates the XML data as a hierarchical tree-like structure where each token is represented by a node assigned uniquely to a subnode (see
 <a href="http://www.w3.org/TR/xml-infoset/" target="blank" class="blue">W3C Information Set</a>). An XML writer can be used to write the data in precisely the same way is read by an
@@ -337,15 +356,9 @@ The XOP writer supports the XOP format only. Instructions on standardization and
 <p>A writer cannot be used more than once for the same XML data or for other data. The writing position
 of a writer is updated while rendering using its methods. The actions permitted by a writer are specified
 by its current writing position. For writers that do not write to external repositories, the written XML can be read using the method GET_OUTPUT.</p>
-<p><s><i>7.31</i></s> <a href="../abenabap_sxml_lib_render">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenabap_sxml_lib_render">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -384,41 +397,6 @@ The output of the transformation is inserted into the output of the writer and i
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_sxml_lib_reader_writer/" title="sXML Library - XML Reader and XML Writer" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                sXML Library - XML Reader and XML Writer
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_sxml_lib_render_oo/" title="sXML Library - Object-Oriented Rendering" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                sXML Library - Object-Oriented Rendering
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

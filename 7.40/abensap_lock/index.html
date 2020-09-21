@@ -15,7 +15,7 @@
     
     
       
-        <title>SAP Locks - ABAP docs</title>
+        <title>Abensap lock - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              SAP Locks
+              Abensap lock
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -268,7 +280,12 @@
                   
                 
                 
-                <h1 id="sap-locks">SAP Locks</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abentransaction" class="blue">Data Consistency</a>&#xA0;</small></p>
+<h1 id="sap-locks">SAP Locks</h1>
 <p>SAP locks must be persisted for the duration of <a href="../abensap_luw_glosry" class="grey" title="Glossary Entry">SAP LUWs</a>. For this reason, different work processes and, if applicable, a new
 <a href="../abenapplication_server_glosry" class="grey" title="Glossary Entry">application server</a> must be able to handle these locks.</p>
 <p>SAP locks are based on lock objects. These are defined in ABAP Dictionary and enable locks to be set on one or more rows in a single database table or locks to be set on rows in multiple database tables associated using
@@ -277,12 +294,8 @@
 <p>Read the documentation on the SAP lock concept in the</p>
 <p>SAP NetWeaver documentation in <a href="http://help.sap.com/" target="blank" class="blue">SAP Help Portal</a>.</p>
 <p><a name="@@ITOC@@SETTINGSAPLOCKS_1"></a>
-<a href="../abensap_lock">7.31</a> <b>7.40</b> <a href="../abensap_lock">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abentransaction" class="blue">Data Consistency</a>&#xA0;</small></p>
+Other versions: 
+ <a href="../../7.31/abensap_lock">7.31</a> | <b>7.40</b> | <a href="../../7.54/abensap_lock">7.54</a></p>
 <h2 id="setting-sap-locks">Setting SAP Locks</h2>
 <p>The function locks access a central lock table in the memory of a special application server work process. Every
 <a href="../abensap_nw_abap_glosry" class="grey" title="Glossary Entry">AS ABAP</a> contains exactly
@@ -365,41 +378,6 @@ of the ENQUEUE function module.  The additional parameter _SYNCHRON can then be 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensap_gui_glosry/" title="SAP GUI" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                SAP GUI
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abensap_lock_glosry/" title="SAP Lock" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                SAP Lock
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

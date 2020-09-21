@@ -15,7 +15,7 @@
     
     
       
-        <title>XSL Transformations in the Repository - ABAP docs</title>
+        <title>Abenabap xslt repository - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              XSL Transformations in the Repository
+              Abenabap xslt repository
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,13 @@
                   
                 
                 
-                <h1 id="xsl-transformations-in-the-repository">XSL Transformations in the Repository</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xslt" class="blue">XSL Transformations</a>&#xA0;</small></p>
+<h1 id="xsl-transformations-in-the-repository">XSL Transformations in the Repository</h1>
 <p>XSL transformations that can be called using a <a href="../abapcall_transformation" class="blue"><code style="display: inline;"><span class="qtext">CALL TRANSFORMATION</span></code></a> statement must exist in the
 <a href="../abenrepository_glosry" class="grey" title="Glossary Entry">repository</a> as XSLT programs. XSLT programs are edited in the
 <a href="../abentransformation_editor_glosry" class="grey" title="Glossary Entry">Transformation Editor</a>, which can be accessed directly using transaction <span class="lnkgrey">STRANS</span> or called up in Object Navigator in
@@ -241,14 +259,9 @@
 <a href="../abenxml_glosry" class="grey" title="Glossary Entry">XML</a> to XML, the result is a copy of the source document. If you perform an identity transformation from ABAP to XML, this produces a
 <a href="../abenabap_xslt_asxml" class="blue">canonical XML representation (asXML)</a> of the ABAP
 data (explicit serialization). An identity transformation from XML to ABAP transforms a canonical XML representation to ABAP data (explicit deserialization).</p>
-<p><b>7.31</b> <s><i>7.40</i></s> <s><i>7.54</i></s></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xslt" class="blue">XSL Transformations</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <b>7.31</b> | <s><i>7.40</i></s> | <s><i>7.54</i></s></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>The identity tranformation ID is not completely symmetrical. When text strings that contain only blanks
@@ -268,41 +281,6 @@ are serialized, the result is a node with the same number of blanks. When nodes 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_xslt_mapping_abexa/" title="asXML, Mapping of UUIDs" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                asXML, Mapping of UUIDs
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabsolute_typename_glosry/" title="absolute type name" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                absolute type name
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>Weak References - ABAP docs</title>
+        <title>Abencl abap weak reference - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Weak References
+              Abencl abap weak reference
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="weak-references">Weak References</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_declarations" class="blue">Declarative statemnts</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenclasses_and_interfaces" class="blue">Classes and Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_objects_oview" class="blue">ABAP Objects - Overview</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenobject" class="blue">Objects</a>&#xA0;</small></p>
+<h1 id="weak-references">Weak References</h1>
 <p>An object in the system class <span class="lnkgrey">CL_ABAP_WEAK_REFERENCE</span> represents a
 <a href="../abenweak_reference_glosry" class="grey" title="Glossary Entry">weak reference</a> to an object in a class. Unlike regular
 <a href="../abenobject_reference_glosry" class="grey" title="Glossary Entry">object references</a>, a weak reference is ignored during execution of the
@@ -239,15 +258,9 @@
 This means that a weak reference does not prevent the referenced object from being deleted when the garbage collector is executed.</p>
 <p>A weak reference to an existing object is created by passing an object reference to the instance constructor of CL_ABAP_WEAK_REFERENCE. You can then use the
 <a href="../abenfunctional_method_glosry" class="grey" title="Glossary Entry">functional method</a> GET to retrieve the reference afterwards. If the object was deleted in the meantime, the return value is initial.</p>
-<p><b>7.31</b> <a href="../abencl_abap_weak_reference">7.40</a> <a href="../abencl_abap_weak_reference">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_declarations" class="blue">Declarative statemnts</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenclasses_and_interfaces" class="blue">Classes and Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_objects_oview" class="blue">ABAP Objects - Overview</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenobject" class="blue">Objects</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abencl_abap_weak_reference">7.40</a> | <a href="../../7.54/abencl_abap_weak_reference">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>A different type of reference retains objects until the available memory becomes limited. The class CL_ABAP_SOFT_REFERENCE is available for these
@@ -267,41 +280,6 @@ This means that a weak reference does not prevent the referenced object from bei
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abencl_abap_tstmp/" title="System Class for Time Stamps" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                System Class for Time Stamps
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abencl_sql_connection/" title="CL_SQL_CONNECTION - Database Connections" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                CL_SQL_CONNECTION - Database Connections
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

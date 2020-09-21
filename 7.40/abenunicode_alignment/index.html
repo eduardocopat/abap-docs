@@ -15,7 +15,7 @@
     
     
       
-        <title>Alignment of Character-Like Data Objects - ABAP docs</title>
+        <title>Abenunicode alignment - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Alignment of Character-Like Data Objects
+              Abenunicode alignment
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,16 @@
                   
                 
                 
-                <h1 id="alignment-of-character-like-data-objects">Alignment of Character-Like Data Objects</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendeclarations" class="blue">Declarations</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_declarations" class="blue">Declaration Statements</a>&#xA0;&#x2192;&#xA0;
+<a href="../abentypes_and_objects" class="blue">Data Types and Data Objects</a>&#xA0;&#x2192;&#xA0;
+<a href="../abentypes_objects_oview" class="blue">Types and Objects - Overview</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendata_objects" class="blue">Data Objects</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenalignment" class="blue">Alignment of Data Objects</a>&#xA0;</small></p>
+<h1 id="alignment-of-character-like-data-objects">Alignment of Character-Like Data Objects</h1>
 <p>In Unicode systems, in addition to <a href="../abenalignment_glosry" class="grey" title="Glossary Entry">alignment
 requirements</a> for numeric data objects of types <code style="display: inline;"><span class="qtext">i</span></code>, <code style="display: inline;"><span class="qtext">decfloat16</span></code>, <code style="display: inline;"><span class="qtext">decfloat34</span></code>, <code style="display: inline;"><span class="qtext">f</span></code>, <code style="display: inline;"><span class="qtext">s</span></code>, and of
 <a href="../abendeep_glosry" class="grey" title="Glossary Entry">deep</a> data objects, all
@@ -240,17 +261,9 @@ requirements</a> for numeric data objects of types <code style="display: inline;
 <p>As a consequence, in structures with components of different data types, the
 <a href="../abenalignment_gap_glosry" class="grey" title="Glossary Entry">alignment gaps</a> in Unicode systems may be different to those in non-Unicode systems. For enhancements between structures, the
 <a href="../abenunicode_fragment_view_glosry" class="grey" title="Glossary Entry">Unicode fragment view</a> concept has been introduced here, which divides a structure into fragments according to its alignment gaps.</p>
-<p><a href="../abenunicode_alignment">7.31</a> <b>7.40</b> <s><i>7.54</i></s></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendeclarations" class="blue">Declarations</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_declarations" class="blue">Declaration Statements</a>&#xA0;&#x2192;&#xA0;
-<a href="../abentypes_and_objects" class="blue">Data Types and Data Objects</a>&#xA0;&#x2192;&#xA0;
-<a href="../abentypes_objects_oview" class="blue">Types and Objects - Overview</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendata_objects" class="blue">Data Objects</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenalignment" class="blue">Alignment of Data Objects</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenunicode_alignment">7.31</a> | <b>7.40</b> | <s><i>7.54</i></s></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>In the following structure, alignment gaps (A) occur in Unicode systems that are not present in non-Unicode
@@ -284,41 +297,6 @@ and the third is due to the component <code style="display: inline;"><span class
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenunicode/" title="Switching to Unicode" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Switching to Unicode
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenunicode_char_represent_glosry/" title="Unicode character representation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Unicode character representation
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

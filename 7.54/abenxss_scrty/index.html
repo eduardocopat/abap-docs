@@ -15,7 +15,7 @@
     
     
       
-        <title>Cross Site Scripting - ABAP docs</title>
+        <title>Abenxss scrty - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Cross Site Scripting
+              Abenxss scrty
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,11 @@
                   
                 
                 
-                <h1 id="cross-site-scripting">Cross Site Scripting</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small></p>
+<h1 id="cross-site-scripting">Cross Site Scripting</h1>
 <p>Cross site scripting (<a href="../abenxss_glosry" class="grey" title="Glossary Entry">XSS</a>) is a
 way of attacking a Web server using a Web application, for example using a manipulated HTML page displayed
 in a browser. Cross site scripting is a wide-ranging topic that cannot be covered in full here and ABAP
@@ -259,12 +275,9 @@ wrapped in frameworks such as SAPUI5, Web Dynpro or Web Services and these frame
 Framework</a> (transaction <span class="lnkgrey">SICF</span>). The built-in function <a href="../abenescape_functions" class="blue">
 <code style="display: inline;"><span class="qtext">escape</span></code></a> is most often used to do this. Other escape methods, such as the
 classes <span class="lnkgrey">CL_HTTP_UTILITY</span>, <span class="lnkgrey">CL_HTTP_SERVER</span>, and <span class="lnkgrey">CL_HTTP_CLIENT</span> are obsolete and should no longer be used.</p>
-<p><s><i>7.31</i></s> <a href="../abenxss_scrty">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenxss_scrty">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p><a href="../abenbusiness_server_pages_glosry" class="grey" title="Glossary Entry">Business Server Pages</a>
@@ -300,41 +313,6 @@ CL_HTTP_EXT_SERVICE_DEMO</span> uses the built-in function <a href="../abenescap
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenxss_glosry/" title="XSS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                XSS
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../dynpcall/" title="CALL SUBSCREEN" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                CALL SUBSCREEN
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

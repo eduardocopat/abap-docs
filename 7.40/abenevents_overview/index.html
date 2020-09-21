@@ -15,7 +15,7 @@
     
     
       
-        <title>Events - ABAP docs</title>
+        <title>Abenevents overview - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Events
+              Abenevents overview
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="events">Events</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendeclarations" class="blue">Declarations</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_declarations" class="blue">Declaration Statements</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenclasses_and_interfaces" class="blue">Classes and Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_objects_oview" class="blue">ABAP Objects - Overview</a>&#xA0;</small></p>
+<h1 id="events">Events</h1>
 <p>Events are generally characterized by occurring at a particular point in time. When an event is triggered,
 other actions can be executed as a consequence. Examples of when events can be triggered include changes
 in the status of an object, such as the cancellation of a posting or the generation of a new account (object). Other interested objects are informed of these situations by events.</p>
@@ -263,14 +282,8 @@ method is called, and the triggering method can transfer parameters. If several 
 <p>Events can have output parameters, which are defined in the same way as those of methods. An event handler
 can transfer these same output parameters as input parameters, whereby the transfer is always a value.
 In addition, there is always an implicit parameter called <code style="display: inline;"><span class="qtext">sender</span></code> that contains a reference to the triggering object, via which the event handler gains access to this  object.</p>
-<p><a href="../abenevents_overview">7.31</a> <b>7.40</b> <a href="../abenevents_overview">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendeclarations" class="blue">Declarations</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_declarations" class="blue">Declaration Statements</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenclasses_and_interfaces" class="blue">Classes and Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_objects_oview" class="blue">ABAP Objects - Overview</a>&#xA0;</small></p>
+<p>Other versions: 
+ <a href="../../7.31/abenevents_overview">7.31</a> | <b>7.40</b> | <a href="../../7.54/abenevents_overview">7.54</a></p>
                 
               
               
@@ -285,41 +298,6 @@ In addition, there is always an implicit parameter called <code style="display: 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenevents_abexa/" title="ABAP Objects, Events" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                ABAP Objects, Events
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenexception_abexas/" title="Examples of Exceptions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Examples of Exceptions
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

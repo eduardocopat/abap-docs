@@ -15,7 +15,7 @@
     
     
       
-        <title>Optimization of the WHERE Condition - ABAP docs</title>
+        <title>Abenitab where optimization - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Optimization of the WHERE Condition
+              Abenitab where optimization
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -262,7 +274,13 @@
                   
                 
                 
-                <h1 id="optimization-of-the-where-condition">Optimization of the WHERE Condition</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenitab" class="blue">Internal Tables</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenitab_perfo" class="blue">Internal Tables: Performance Notes</a>&#xA0;</small></p>
+<h1 id="optimization-of-the-where-condition">Optimization of the WHERE Condition</h1>
 <p>The statements <a href="../abaploop_at_itab" class="blue"><code style="display: inline;"><span class="qtext">LOOP AT</span></code></a>, <a href="../abapdelete_itab" class="blue">
 <code style="display: inline;"><span class="qtext">DELETE</span></code></a>, and <a href="../abapmodify_itab" class="blue"><code style="display: inline;"><span class="qtext">MODIFY</span></code></a>
 can be specified together with a <code style="display: inline;"><span class="qtext">WHERE</span></code> condition that selects specific rows of the internal table. Searches in a
@@ -355,14 +373,9 @@ a syntax error or warning is produced or an exception raised. Accesses that use 
 
 </ul>
 
-<p><a href="../abenitab_where_optimization">7.31</a> <a href="../abenitab_where_optimization">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenitab" class="blue">Internal Tables</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenitab_perfo" class="blue">Internal Tables: Performance Notes</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenitab_where_optimization">7.31</a> | <a href="../../7.40/abenitab_where_optimization">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>If the rows selected using <code style="display: inline;"><span class="qtext">WHERE</span></code> are modified or deleted using <a href="../abapmodify_itab" class="blue">
@@ -631,41 +644,6 @@ cl_demo_output=&gt;write( |READ: { sy-subrc }| ). <br> <br>&quot;Expression <br>
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenitab_streams/" title="Streaming for Internal Tables" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Streaming for Internal Tables
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abeniteration_expression_glosry/" title="iteration expression" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                iteration expression
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

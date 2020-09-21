@@ -15,7 +15,7 @@
     
     
       
-        <title>Query Conditions - ABAP docs</title>
+        <title>Abenos query filter cond - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Query Conditions
+              Abenos query filter cond
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -296,7 +308,14 @@
                   
                 
                 
-                <h1 id="query-conditions">Query Conditions</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services_query" class="blue">Query Service</a>&#xA0;</small></p>
+<h1 id="query-conditions">Query Conditions</h1>
 <p>A query condition is a logical expression that compares the attributes of a persistent class with free
 parameters or values. The syntax of a query condition is based on the syntax of the ABAP SQL <code style="display: inline;"><span class="qtext">WHERE</span></code>
 condition, where reference variables for object references are also supported. Like a <code style="display: inline;"><span class="qtext">WHERE</span></code>
@@ -346,15 +365,9 @@ a list of parameter names that can be used in the query condition. The position 
 the parameter list defines the index of the parameter in the parameter table. If no parameter list is
 specified, a predefined parameter list with the three parameter names <span class="qtext400">PAR1</span>, <span class="qtext400">PAR2</span>, and <span class="qtext400">PAR3</span> is used.</p>
 <p>Literal values are generally enclosed by quotation marks. The semantics of the relational operators are defined by the corresponding ABAP SQL language element into which the logical expression is converted.</p>
-<p><s><i>7.31</i></s> <a href="../abenos_query_filter_cond">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services_query" class="blue">Query Service</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenos_query_filter_cond">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>The query condition and its parameter list are analyzed when a query is executed and transformed into
@@ -417,41 +430,6 @@ and <span class="qtext400">NOT</span> are also defined by their semantics in ABA
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenos_query_comps/" title="Query Service Components" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Query Service Components
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenos_query_sort_cond/" title="Sort Conditions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Sort Conditions
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

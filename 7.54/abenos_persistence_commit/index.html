@@ -15,7 +15,7 @@
     
     
       
-        <title>Saving Persistent Objects - ABAP docs</title>
+        <title>Abenos persistence commit - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Saving Persistent Objects
+              Abenos persistence commit
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="saving-persistent-objects">Saving Persistent Objects</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services_persist" class="blue">Persistence Service</a>&#xA0;</small></p>
+<h1 id="saving-persistent-objects">Saving Persistent Objects</h1>
 <p>The ABAP statement <code style="display: inline;"><span class="qtext">COMMIT WORK</span></code> must be executed to apply any changes to the
 instances of persistent classes to the actual persistent objects in the database. If an object-oriented
 transaction from the transaction service is not used explicitly, the statement <span class="qtext">COMMIT
@@ -254,14 +273,8 @@ mode of the implicitly used transaction service must be changed. This is done by
 
 <p>Persistent objects can be also used during updates &#x2013; that is, within update modules. The update
 task changes the persistent objects in update modules as the last step after processing all the registered update modules in the database.</p>
-<p><s><i>7.31</i></s> <a href="../abenos_persistence_commit">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services_persist" class="blue">Persistence Service</a>&#xA0;</small></p>
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenos_persistence_commit">7.40</a> | <b>7.54</b></p>
                 
               
               
@@ -276,41 +289,6 @@ task changes the persistent objects in update modules as the last step after pro
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenos_persist_abexa/" title="Persistence Service" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Persistence Service
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenos_persistence_comps/" title="Components of the Persistence Service" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Components of the Persistence Service
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

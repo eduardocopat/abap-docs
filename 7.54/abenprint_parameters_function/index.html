@@ -15,7 +15,7 @@
     
     
       
-        <title>Setting Program-Driven Spool Parameters - ABAP docs</title>
+        <title>Abenprint parameters function - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Setting Program-Driven Spool Parameters
+              Abenprint parameters function
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="setting-program-driven-spool-parameters">Setting Program-Driven Spool Parameters</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_screens" class="blue">SAP GUI User Dialogs</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_dynpro_list" class="blue">Classic Lists</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenprint" class="blue">Spooling Lists</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenprint_parameters" class="blue">spool parameter</a>&#xA0;</small></p>
+<h1 id="setting-program-driven-spool-parameters">Setting Program-Driven Spool Parameters</h1>
 <p>Spool and archiving parameters can only be set in a program using the following function module: <span class="lnkgrey">
 GET_PRINT_PARAMETERS</span>. If the corresponding structures are changed directly and then the parameters
 in question used in <code style="display: inline;"><span class="qtext">NEW-PAGE PRINT ON</span></code> or <code style="display: inline;"><span class="qtext">SUBMIT TO SAP-SPOOL</span></code>,
@@ -267,15 +286,9 @@ and can be switched off using the parameter NO_DIALOG.  The values passed to the
 the user master record. Dependent parameters are set automatically. If the function module is unable
 to generate a record with valid spool and archiving parameters, it generates an exception. The generated
 records are either complete or empty. The export parameter VALID (if the <span class="italic">spool dialog box</span> is being used) indicates whether a complete record could be created.</p>
-<p><a href="../abenprint_parameters_function">7.31</a> <a href="../abenprint_parameters_function">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_screens" class="blue">SAP GUI User Dialogs</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_dynpro_list" class="blue">Classic Lists</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenprint" class="blue">Spooling Lists</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenprint_parameters" class="blue">spool parameter</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenprint_parameters_function">7.31</a> | <a href="../../7.40/abenprint_parameters_function">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -317,41 +330,6 @@ and ARC_PARAMS import parameters of the function module and overwritten there. T
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenprint_parameters/" title="spool parameter" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                spool parameter
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenprint_parameters_overview/" title="Overview of All Spool Parameters" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Overview of All Spool Parameters
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

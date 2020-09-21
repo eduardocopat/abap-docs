@@ -15,7 +15,7 @@
     
     
       
-        <title>Numeric Access to Date Fields and Time Fields - ABAP docs</title>
+        <title>Abenchar date time fields numlike - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Numeric Access to Date Fields and Time Fields
+              Abenchar date time fields numlike
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,14 @@
                   
                 
                 
-                <h1 id="numeric-access-to-date-fields-and-time-fields">Numeric Access to Date Fields and Time Fields</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendate_time_processing" class="blue">Date and Time Processing</a>&#xA0;&#x2192;&#xA0;
+<a href="../abencharacter_date_time" class="blue">Date Fields and Time Fields</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenchar_date_time_fields_access" class="blue">Access to Date Fields and Time Fields</a>&#xA0;</small></p>
+<h1 id="numeric-access-to-date-fields-and-time-fields">Numeric Access to Date Fields and Time Fields</h1>
 <p>Numeric access to date fields and time fields exploits the fact that the
 <a href="../abenconversion_elementary" class="blue">conversion</a> of the types <code style="display: inline;"><span class="qtext">d</span></code>
 and <code style="display: inline;"><span class="qtext">t</span></code> to numeric values produces an integer number of days or seconds. This applies particularly when using date fields and time fields in
@@ -239,15 +258,9 @@ and <code style="display: inline;"><span class="qtext">t</span></code> to numeri
 converted to the corresponding calculation type. This enables differences to be calculated or values
 to be added or subtracted from date fields or time fields.  None of the other arithmetic operations are generally advisable here. To avoid unexpected results from these calculations, the
 <a href="../abenchar_date_time_fields_validity" class="blue">validity</a> of the content of the date or time fields must be verified.</p>
-<p><a href="../abenchar_date_time_fields_numlike">7.31</a> <a href="../abenchar_date_time_fields_numlike">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendate_time_processing" class="blue">Date and Time Processing</a>&#xA0;&#x2192;&#xA0;
-<a href="../abencharacter_date_time" class="blue">Date Fields and Time Fields</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenchar_date_time_fields_access" class="blue">Access to Date Fields and Time Fields</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenchar_date_time_fields_numlike">7.31</a> | <a href="../../7.40/abenchar_date_time_fields_numlike">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>The following calculations provide the current day of the year, plus the hour, minutes, and seconds of the current time. The date and time are provided by a time stamp.</p>
@@ -305,41 +318,6 @@ to be added or subtracted from date fields or time fields.  None of the other ar
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenchar_date_time_fields_charlike/" title="Character-Like Access to Date Fields and Time Fields" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Character-Like Access to Date Fields and Time Fields
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenchar_date_time_fields_validity/" title="Validity of Date Fields and Time Fields" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Validity of Date Fields and Time Fields
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>Messages as Exception Texts - ABAP docs</title>
+        <title>Abenexception texts t100 - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Messages as Exception Texts
+              Abenexception texts t100
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,15 @@
                   
                 
                 
-                <h1 id="messages-as-exception-texts">Messages as Exception Texts</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_flow_logic" class="blue">Program Flow Logic</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_exceptions" class="blue">Exception Handling</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenexceptions" class="blue">Class-Based Exceptions</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenexceptions_classes" class="blue">Exception Classes</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenexception_texts" class="blue">Exception Texts</a>&#xA0;</small></p>
+<h1 id="messages-as-exception-texts">Messages as Exception Texts</h1>
 <p>The exception texts of an exception class are usually defined by referencing
 <a href="../abenmessage_glosry" class="grey" title="Glossary Entry">messages</a> from the table
 <a href="../abenabap_messages_storing" class="blue">T100</a>. The exception class must implement the interface
@@ -288,16 +308,9 @@ text. It is strongly recommended that only the constants that exist in the class
 exception texts are passed to TEXTID. This selects a predefined text for the exception. The attributes
 assigned to the placeholders &quot;&amp;1&quot; to &quot;&amp;4&quot; or &quot;&amp;&quot; of a message can be assigned values using
 the input parameters of the same name of the instance constructor. The placeholders are replaced by the content of the assigned attributes when the exception is raised.</p>
-<p><s><i>7.31</i></s> <s><i>7.40</i></s> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_flow_logic" class="blue">Program Flow Logic</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_exceptions" class="blue">Exception Handling</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenexceptions" class="blue">Class-Based Exceptions</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenexceptions_classes" class="blue">Exception Classes</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenexception_texts" class="blue">Exception Texts</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <s><i>7.40</i></s> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -358,41 +371,6 @@ application created in the superpackage SABAP_DEMOS_CAR_RENTAL, use messages as 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenexception_texts_internal/" title="Exception Texts for System Classes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Exception Texts for System Classes
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenexceptions/" title="Class-Based Exceptions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Class-Based Exceptions
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

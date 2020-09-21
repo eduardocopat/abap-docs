@@ -15,7 +15,7 @@
     
     
       
-        <title>CLEANUP method - ABAP docs</title>
+        <title>Abensaver method cleanup - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              CLEANUP method
+              Abensaver method cleanup
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,13 @@
                   
                 
                 
-                <h1 id="cleanup-method">CLEANUP method</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenrestful_abap_programming" class="blue">ABAP RESTful Programming Model</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_behavior_implementations" class="blue">Behavior Implementations</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenrpm_saver_class" class="blue">Saver Class</a>&#xA0;</small></p>
+<h1 id="cleanup-method">CLEANUP method</h1>
 <p>The <span class="qtext400">cleanup</span> method is called when an error has occurred during the execution
 of the methods <a href="../abensaver_finalize" class="blue"><span class="qtext400">finalize</span></a>
 and <a href="../abensaver_check_before_save" class="blue"><span class="qtext400">check_before_save</span></a>.
@@ -239,14 +257,9 @@ During the cleanup process, all calculations and data modifications are discarde
 <p>The <span class="qtext400">cleanup</span> method is also called at the end of a successful saver sequence to delete the transactional buffer. Since the same ABAP session is likely to be used for more than one
 <a href="../abenluw_glosry" class="grey" title="Glossary Entry">LUW</a>, remaining changes in the transactional buffer can lead to inconsistencies.</p>
 <p>The <span class="qtext400">cleanup</span> method does not have any parameters and does not return errors or messages.</p>
-<p><s><i>7.31</i></s> <s><i>7.40</i></s> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenrestful_abap_programming" class="blue">ABAP RESTful Programming Model</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_behavior_implementations" class="blue">Behavior Implementations</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenrpm_saver_class" class="blue">Saver Class</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <s><i>7.40</i></s> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>In the following example, the data from the ABAP flight data reference scenario (or flight data scenario
@@ -285,41 +298,6 @@ bookings. The root entity <span class="qtext400">Travel</span> represents the bu
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensaver_finalize/" title="Method FINALIZE" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Method FINALIZE
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abensaver_method_save/" title="Method SAVE" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Method SAVE
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

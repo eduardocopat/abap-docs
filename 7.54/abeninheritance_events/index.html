@@ -15,7 +15,7 @@
     
     
       
-        <title>Inheritance and Events - ABAP docs</title>
+        <title>Abeninheritance events - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Inheritance and Events
+              Abeninheritance events
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,23 +260,24 @@
                   
                 
                 
-                <h1 id="inheritance-and-events">Inheritance and Events</h1>
-<p>Once declared in a superclass, an event is known in all subclasses of the inheritance tree in which it is visible, and can be raised in the methods there.</p>
-<p>An event handler can be declared with reference to all classes of the inheritance tree in which the
-event is visible for the event handler. However, it can only handle events raised in classes that are
-more specific than or equal to the class for which it is declared. If the event is raised in a method of a superclass of the class for which an event handler is declared, it cannot handle it.</p>
-<p>Note the latter especially when raising static events in static methods, since a static method is always executed in the class in which it was declared (also refer to
-<a href="../abeninheritance_statical" class="blue">Inheritance and Static Components</a>).</p>
-<p><a href="../abeninheritance_events">7.31</a> <a href="../abeninheritance_events">7.40</a> <b>7.54</b></p>
-<p><small>
+                <p><small>
 <a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
 <a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
 <a href="../abendeclarations" class="blue">Declarations</a>&#xA0;&#x2192;&#xA0;
 <a href="../abenabap_declarations" class="blue">Declaration Statements</a>&#xA0;&#x2192;&#xA0;
 <a href="../abenclasses_and_interfaces" class="blue">Classes and Interfaces</a>&#xA0;&#x2192;&#xA0;
 <a href="../abenabap_objects_oview" class="blue">ABAP Objects - Overview</a>&#xA0;&#x2192;&#xA0;
-<a href="../abeninheritance" class="blue">Inheritance</a>&#xA0;</small>
-<br style="display: block">
+<a href="../abeninheritance" class="blue">Inheritance</a>&#xA0;</small></p>
+<h1 id="inheritance-and-events">Inheritance and Events</h1>
+<p>Once declared in a superclass, an event is known in all subclasses of the inheritance tree in which it is visible, and can be raised in the methods there.</p>
+<p>An event handler can be declared with reference to all classes of the inheritance tree in which the
+event is visible for the event handler. However, it can only handle events raised in classes that are
+more specific than or equal to the class for which it is declared. If the event is raised in a method of a superclass of the class for which an event handler is declared, it cannot handle it.</p>
+<p>Note the latter especially when raising static events in static methods, since a static method is always executed in the class in which it was declared (also refer to
+<a href="../abeninheritance_statical" class="blue">Inheritance and Static Components</a>).</p>
+<p>Other versions: 
+ <a href="../../7.31/abeninheritance_events">7.31</a> | <a href="../../7.40/abeninheritance_events">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>In the case of event handlers for events declared in interfaces, the above also applies to the class in which the interface is included.</p>
@@ -286,41 +299,6 @@ more specific than or equal to the class for which it is declared. If the event 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abeninheritance_constructors/" title="Inheritance and Constructors" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Inheritance and Constructors
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abeninheritance_glosry/" title="inheritance" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                inheritance
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

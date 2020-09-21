@@ -15,7 +15,7 @@
     
     
       
-        <title>User-Dependent Program Flow - ABAP docs</title>
+        <title>Abenuser dependent scrty - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              User-Dependent Program Flow
+              Abenuser dependent scrty
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,11 @@
                   
                 
                 
-                <h1 id="user-dependent-program-flow">User-Dependent Program Flow</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenother_programming_scrty" class="blue">Further Security Risks</a>&#xA0;</small></p>
+<h1 id="user-dependent-program-flow">User-Dependent Program Flow</h1>
 <p>The use of user names in ABAP programs to control program behavior can be a security risk. In the worst
 case scenario, a back door can be created and used by developers to access unauthorized data or functions
 in systems where they do not have authorization. On the other hand, these can also be code sections
@@ -259,12 +275,9 @@ which do not usually need to be used locally. It may, however, be useful to call
 <p><code style="display: inline;"><span class="qtext">sy-uname</span></code> is usually redundant when specified explicitly after the addition
 <code style="display: inline;"><span class="qtext">USER</span></code> and carries the risk of the content being manipulated in advance, for example in ABAP Debugger.</p>
 <p>User names passed to the program from the outside should never be used. If this does become necessary, however, the names must be checked carefully.</p>
-<p><s><i>7.31</i></s> <b>7.40</b> <a href="../abenuser_dependent_scrty">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenother_programming_scrty" class="blue">Further Security Risks</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <b>7.40</b> | <a href="../../7.54/abenuser_dependent_scrty">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -306,41 +319,6 @@ intentionally. The program must be repaired by removing the <code style="display
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenuser_date_glosry/" title="User date" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                User date
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenuser_glosry/" title="User" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                User
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

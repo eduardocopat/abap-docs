@@ -15,7 +15,7 @@
     
     
       
-        <title>Query Service Components - ABAP docs</title>
+        <title>Abenos query comps - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Query Service Components
+              Abenos query comps
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -282,7 +294,14 @@
                   
                 
                 
-                <h1 id="query-service-components">Query Service Components</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_object_services_query" class="blue">Query Service</a>&#xA0;</small></p>
+<h1 id="query-service-components">Query Service Components</h1>
 <p>A query is represented by a query object, which is managed by a query manager (also an object). The query manager represents the query service with respect to the ABAP program.</p>
 <p>To create a query manager, the static method GET_QUERY_MANAGER of the general system service class <span class="lnkgrey">CL_OS_SYSTEM</span> is required.</p>
 <p>An ABAP program does not work with the query manager and queries by using class reference variables.
@@ -292,14 +311,8 @@ IF_OS_CA_PERSISTENCY</span> of a class agent. This means a search is carried out
 <p>The options for executing a query are controlled using the interface <span class="lnkgrey">IF_OS_QUERY_OPTIONS</span>.
 To enable this, a structure of the type IF_OS_QUERY_OPTIONS=&gt;OPTIONS can be passed to the method GET_PERSISTENT_BY_QUERY.</p>
 <p><a name="@@ITOC@@ABENOS_QUERY_COMPS_1"></a>
-<s><i>7.31</i></s> <a href="../abenos_query_comps">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP Database Access</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services" class="blue">Object Services</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_object_services_query" class="blue">Query Service</a>&#xA0;</small></p>
+Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenos_query_comps">7.40</a> | <b>7.54</b></p>
 <h2 id="relevant-method-of-the-system-service">Relevant Method of the System Service</h2>
 <p>Most of the components of the system service class <span class="lnkgrey">CL_OS_SYSTEM</span> are used
 internally by the Object Services. A method must be used in an application program to be able to work explicitly with object-oriented queries.</p>
@@ -506,41 +519,6 @@ APPEND_DESCENDING of the additional interface <span class="lnkgrey">IF_OS_QUERY_
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenos_query_abexa/" title="Query Service" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Query Service
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenos_query_filter_cond/" title="Query Conditions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Query Conditions
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

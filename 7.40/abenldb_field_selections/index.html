@@ -15,7 +15,7 @@
     
     
       
-        <title>Logical Databases - Field Selections - ABAP docs</title>
+        <title>Abenldb field selections - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Logical Databases - Field Selections
+              Abenldb field selections
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,15 @@
                   
                 
                 
-                <h1 id="logical-databases-field-selections">Logical Databases - Field Selections</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_obsolete" class="blue">Obsolete Language Elements</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendata_storage_obsolete" class="blue">Obsolete Processing of External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenldb" class="blue">Logical Databases (Obsolete)</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenldb_oview" class="blue">Logical Databases - Components</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenldb_others" class="blue">Logical Databases - Further Elements</a>&#xA0;</small></p>
+<h1 id="logical-databases-field-selections">Logical Databases - Field Selections</h1>
 <p>The statement <a href="../abapselection-screen_ldb_field" class="blue"><span class="qtext"> SELECTION-SCREEN
 FIELD SELECTION FOR NODE|TABLE node</span></a> specifies a node <code style="display: inline;"><span class="qtext">node</span></code> of a
 logical database in the selection include for field selections. This means that individual columns can
@@ -249,16 +269,9 @@ and <code style="display: inline;"><span class="qtext">fields</span></code>. In 
 contains the name of a node reserved for field selections.  For each of these nodes, the table-like
 component <code style="display: inline;"><span class="qtext">fields</span></code> contains the columns specified in the <code style="display: inline;"><span class="qtext">GET</span></code>
 statements of the application program. The table <code style="display: inline;"><span class="qtext">fields</span></code> is defined so that it can be used directly to specify columns dynamically in a <code style="display: inline;"><span class="qtext">SELECT</span></code> statement.</p>
-<p><s><i>7.31</i></s> <b>7.40</b> <a href="../abenldb_field_selections">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_obsolete" class="blue">Obsolete Language Elements</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendata_storage_obsolete" class="blue">Obsolete Processing of External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenldb" class="blue">Logical Databases (Obsolete)</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenldb_oview" class="blue">Logical Databases - Components</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenldb_others" class="blue">Logical Databases - Further Elements</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <b>7.40</b> | <a href="../../7.54/abenldb_field_selections">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>The database table SCARR is the root node of the logical database DEMO and the table SPFLI is the only successor. The selection include DBDEMOSEL contains the following lines:</p>
@@ -305,41 +318,6 @@ Internally, the runtime environment fills <code style="display: inline;"><span c
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenldb_examples/" title="Logical Databases - Examples" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Logical Databases - Examples
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenldb_free_selections/" title="Logical Databases - Dynamic Selections" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Logical Databases - Dynamic Selections
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

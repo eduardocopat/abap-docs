@@ -15,7 +15,7 @@
     
     
       
-        <title>Flow of an Executable Program - ABAP docs</title>
+        <title>Abenreporting process - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Flow of an Executable Program
+              Abenreporting process
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,13 @@
                   
                 
                 
-                <h1 id="flow-of-an-executable-program">Flow of an Executable Program</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_program_call" class="blue">Calling Programs</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_submit_report" class="blue">Calling Executable Programs</a>&#xA0;</small></p>
+<h1 id="flow-of-an-executable-program">Flow of an Executable Program</h1>
 <p>The statement <a href="../abapsubmit" class="blue"><code style="display: inline;"><span class="qtext">SUBMIT</span></code></a> loads the called program in a separate
 <a href="../abeninternal_session_glosry" class="grey" title="Glossary Entry">internal session</a> and starts a series of processes in the
 <a href="../abenabap_runtime_envir_glosry" class="grey" title="Glossary Entry">ABAP runtime environment</a> that raise events and actions in the called program in the following order:</p>
@@ -305,14 +323,9 @@ user exits selection screen processing by choosing <span class="italic">Back</sp
 
 <p>The called program can be exited in any of these steps by using the statement <a href="../abapleave_list-processing" class="blue">
 <code style="display: inline;"><span class="qtext">LEAVE PROGRAM</span></code></a> and during list processing by using <a href="../abapleave_program" class="blue"><code style="display: inline;"><span class="qtext">LEAVE LIST-PROCESSING</span></code></a>.</p>
-<p><s><i>7.31</i></s> <a href="../abenreporting_process">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_program_call" class="blue">Calling Programs</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_submit_report" class="blue">Calling Executable Programs</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenreporting_process">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -343,41 +356,6 @@ or <a href="../abapend-of-editing" class="blue"><code style="display: inline;"><
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenreporting_glosry/" title="reporting" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                reporting
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenrepository_browser_glosry/" title="Repository Browser" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Repository Browser
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

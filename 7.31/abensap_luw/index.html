@@ -15,7 +15,7 @@
     
     
       
-        <title>SAP LUW - ABAP docs</title>
+        <title>Abensap luw - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              SAP LUW
+              Abensap luw
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -282,7 +294,12 @@
                   
                 
                 
-                <h1 id="sap-luw">SAP LUW</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abentransaction" class="blue">Data Consistency</a>&#xA0;</small></p>
+<h1 id="sap-luw">SAP LUW</h1>
 <p>As a rule, an application program is processed by multiple
 <a href="../abenwork_process_glosry" class="grey" title="Glossary Entry">work processes</a> in succession, and every change of the work process is linked to an implicit
 <a href="../abendatabase_commit_glosry" class="grey" title="Glossary Entry">database commit</a>. This means that an application program is not automatically associated with a single
@@ -290,12 +307,8 @@
 <p>To ensure the data consistency of application programs that are executed across multiple work processes,
 the change statements are not executed directly in an SAP LUW. Instead, they are first registered and then executed by a single work process, that is in a single database LUW.</p>
 <p>The following techniques are available for bundling the change statements in a database LUW:</p>
-<p><b>7.31</b> <a href="../abensap_luw">7.40</a> <a href="../abensap_luw">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abentransaction" class="blue">Data Consistency</a>&#xA0;</small></p>
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abensap_luw">7.40</a> | <a href="../../7.54/abensap_luw">7.54</a></p>
 <h2 id="bundling-using-function-modules-update">Bundling using function modules (update)</h2>
 <p>The statement <a href="../abapcall_function_update" class="blue"><code style="display: inline;"><span class="qtext">CALL FUNCTION ... IN UPDATE TASK</span></code></a> is used to register an update function module for later execution in an update work process
 (<a href="../abensynchronous_update_glosry" class="grey" title="Glossary Entry">synchronous</a> and
@@ -379,41 +392,6 @@ SAP LUW, then the SAP LUW is ended without the procedures being called or rolled
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensap_lock_glosry/" title="SAP Lock" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                SAP Lock
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abensap_luw_glosry/" title="SAP LUW" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                SAP LUW
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

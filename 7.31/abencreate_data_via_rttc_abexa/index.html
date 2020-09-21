@@ -15,7 +15,7 @@
     
     
       
-        <title>Creating a Structure Using RTTC - ABAP docs</title>
+        <title>Abencreate data via rttc abexa - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Creating a Structure Using RTTC
+              Abencreate data via rttc abexa
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -255,15 +267,16 @@
                   
                 
                 
-                <h1 id="creating-a-structure-using-rttc">Creating a Structure Using RTTC</h1>
-<p>The example demonstrates how a structure is created using <a href="../abenrttc_glosry" class="grey" title="Glossary Entry">RTTC</a>.</p>
-<p><b>7.31</b> <a href="../abencreate_data_via_rttc_abexa">7.40</a> <a href="../abencreate_data_via_rttc_abexa">7.54</a></p>
-<p><small>
+                <p><small>
 <a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
 <a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
 <a href="../abencreate_objects" class="blue">Creating Objects</a>&#xA0;&#x2192;&#xA0;
 <a href="../abapcreate_data" class="blue">CREATE DATA</a>&#xA0;&#x2192;&#xA0;
 <a href="../abapcreate_data_handle" class="blue">CREATE DATA - HANDLE</a>&#xA0;</small></p>
+<h1 id="creating-a-structure-using-rttc">Creating a Structure Using RTTC</h1>
+<p>The example demonstrates how a structure is created using <a href="../abenrttc_glosry" class="grey" title="Glossary Entry">RTTC</a>.</p>
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abencreate_data_via_rttc_abexa">7.40</a> | <a href="../../7.54/abencreate_data_via_rttc_abexa">7.54</a></p>
 <h2 id="source-code">Source Code</h2>
 <div class="highlight"><pre><span></span><code>    <span class="k">DATA</span><span class="p">:</span> <span class="nv">struct_type</span> <span class="k">TYPE REF TO</span> <span class="nv">cl_abap_structdescr</span><span class="p">,</span>
           <span class="nv">comp_tab</span>    <span class="k">TYPE </span><span class="nv">cl_abap_structdescr</span><span class="o">=&gt;</span><span class="nv">component_table</span><span class="p">,</span>
@@ -322,41 +335,6 @@ class. The description of the components of the structure is provided in the int
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abencpi-c_glosry/" title="CPI-C" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                CPI-C
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abencreate_objects/" title="Creating Objects" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Creating Objects
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

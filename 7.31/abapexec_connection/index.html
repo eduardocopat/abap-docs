@@ -15,7 +15,7 @@
     
     
       
-        <title>EXEC SQL - CONNECT - ABAP docs</title>
+        <title>Abapexec connection - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              EXEC SQL - CONNECT
+              Abapexec connection
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -349,7 +361,14 @@
                   
                 
                 
-                <h1 id="exec-sql-connect">EXEC SQL - CONNECT</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sql" class="blue">ABAP - Database Accesses</a>&#xA0;&#x2192;&#xA0;
+<a href="../abennativesql" class="blue">Native SQL</a>&#xA0;&#x2192;&#xA0;
+<a href="../abapexec" class="blue">EXEC SQL</a>&#xA0;</small></p>
+<h1 id="exec-sql-connect">EXEC SQL - CONNECT</h1>
 <p>So that you can work with <a href="../abennative_sql_glosry" class="grey" title="Glossary Entry">Native SQL</a> statements, a connection to a database system must be defined. When you start an
 <a href="../abensap_nw_abap_glosry" class="grey" title="Glossary Entry">AS ABAP</a>, a standard link
 from the database interface to the central database of the AS ABAP is started. This connection will be defined as the current connection for Native SQL statements and as a standard connection for
@@ -357,15 +376,9 @@ from the database interface to the central database of the AS ABAP is started. T
 ABAP program is started. Using the following SAP-specific Native SQL statements, additional connections to other database systems can be started. These can then be accessed in Native SQL.</p>
 <p>Possible AS ABAP connections to database systems are stored in the <span class="lnkgrey">DBCON</span> database table. You can create and change entries in the DBCON database table by using the
 <a href="../abendba_cockpit_glosry" class="grey" title="Glossary Entry">DBA Cockpit</a> tool.</p>
-<p><b>7.31</b> <a href="../abapexec_connection">7.40</a> <a href="../abapexec_connection">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_language_external_data" class="blue">Processing External Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sql" class="blue">ABAP - Database Accesses</a>&#xA0;&#x2192;&#xA0;
-<a href="../abennativesql" class="blue">Native SQL</a>&#xA0;&#x2192;&#xA0;
-<a href="../abapexec" class="blue">EXEC SQL</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <b>7.31</b> | <a href="../../7.40/abapexec_connection">7.40</a> | <a href="../../7.54/abapexec_connection">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>The <a href="../abendb_commit" class="blue">implicit database commit</a> that results at the change of work processes is carried out on all open connections.  </p>
@@ -493,41 +506,6 @@ AS</span>, then this name must be used; otherwise, the name of the database syst
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abapexec/" title="EXEC SQL" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                EXEC SQL
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abapexec_cursor/" title="EXEC SQL - OPEN, CLOSE, FETCH" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                EXEC SQL - OPEN, CLOSE, FETCH
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

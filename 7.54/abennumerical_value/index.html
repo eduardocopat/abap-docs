@@ -15,7 +15,7 @@
     
     
       
-        <title>Representation of Numeric Values in Character-Like Fields - ABAP docs</title>
+        <title>Abennumerical value - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Representation of Numeric Values in Character-Like Fields
+              Abennumerical value
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,15 @@
                   
                 
                 
-                <h1 id="representation-of-numeric-values-in-character-like-fields">Representation of Numeric Values in Character-Like Fields</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenvalue_assignments" class="blue">Assignments</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenconversion_rules" class="blue">Assignment and Conversion Rules</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenconversion_elementary" class="blue">Conversion Rules for Elementary Data Objects</a>&#xA0;&#x2192;&#xA0;
+<a href="../abencharacter_source_fields" class="blue">Character-Like Source Fields</a>&#xA0;</small></p>
+<h1 id="representation-of-numeric-values-in-character-like-fields">Representation of Numeric Values in Character-Like Fields</h1>
 <p>The values of data objects of character-like data types can be assigned to data objects of the numeric types <code style="display: inline;"><span class="qtext">i</span></code>, <code style="display: inline;"><span class="qtext">int8</span></code>,
 (<code style="display: inline;"><span class="qtext">b</span></code>, <code style="display: inline;"><span class="qtext">s</span></code>), <code style="display: inline;"><span class="qtext">p</span></code>, <code style="display: inline;"><span class="qtext">decfloat16</span></code>,
 <code style="display: inline;"><span class="qtext">decfloat34</span></code>, and <code style="display: inline;"><span class="qtext">f</span></code> if they contain the valid representation of a number. The following character strings are valid numbers:</p>
@@ -288,16 +308,9 @@ notation where the sign on the right is not separated by blanks is valid if the 
 <p>Also, character strings containing no characters or only blanks can always be converted to the value
 0, when being assigned to variables with numeric data types. When being assigned to the type <code style="display: inline;"><span class="qtext">f</span></code>,
 a character string that does not contain any of the above notations is interpreted as a number with value 0, if it starts with a blank.</p>
-<p><a href="../abennumerical_value">7.31</a> <a href="../abennumerical_value">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_working" class="blue">Processing Internal Data</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenvalue_assignments" class="blue">Assignments</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenconversion_rules" class="blue">Assignment and Conversion Rules</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenconversion_elementary" class="blue">Conversion Rules for Elementary Data Objects</a>&#xA0;&#x2192;&#xA0;
-<a href="../abencharacter_source_fields" class="blue">Character-Like Source Fields</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abennumerical_value">7.31</a> | <a href="../../7.40/abennumerical_value">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -328,41 +341,6 @@ the sign must always be on the left, and there must be no blanks. Under no circu
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abennumerical_position_glosry/" title="numeric operand position" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                numeric operand position
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abennwes-46-debugger/" title="Debugger in Release 4.6A" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Debugger in Release 4.6A
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>Including Subscreens Directly - ABAP docs</title>
+        <title>Abendynp subscreen - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Including Subscreens Directly
+              Abendynp subscreen
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,14 @@
                   
                 
                 
-                <h1 id="including-subscreens-directly">Including Subscreens Directly</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_screens" class="blue">SAP GUI User Dialogs</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_dynpros" class="blue">General Dynpros</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_dynpros_dynpro_statements" class="blue">Statements in the Dynpro Flow Logic</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendynp_subscreens" class="blue">Subscreens, Tabstrips, and Splitter Controls</a>&#xA0;</small></p>
+<h1 id="including-subscreens-directly">Including Subscreens Directly</h1>
 <p>The statement <a href="../dynpcall" class="blue"><code style="display: inline;"><span class="qtext">CALL SUBSCREEN</span></code></a> can be used to insert other screens directly into the
 <a href="../abenscreen_glosry" class="grey" title="Glossary Entry">screen</a> of a
 <a href="../abendynpro_glosry" class="grey" title="Glossary Entry">dynpro</a> in the form of subscreens.
@@ -260,15 +279,9 @@ subscreen dynpros</a>. When a subscreen is inserted, the flow logic of the subsc
 inserted. Subscreens can also insert other subscreens. Subscreens cannot have their own OK field. Instead,
 user actions on subscreens pass the function codes to the OK field of the dynpro that includes the subscreen.
 In the PAI event block of a subscreen dynpro, a <a href="../dynpmodule" class="blue"><code style="display: inline;"><span class="qtext">MODULE</span></code></a> statement is never executed with the <code style="display: inline;"><span class="qtext">AT EXIT-COMMAND</span></code> addition.</p>
-<p><a href="../abendynp_subscreen">7.31</a> <a href="../abendynp_subscreen">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_screens" class="blue">SAP GUI User Dialogs</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_dynpros" class="blue">General Dynpros</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_dynpros_dynpro_statements" class="blue">Statements in the Dynpro Flow Logic</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendynp_subscreens" class="blue">Subscreens, Tabstrips, and Splitter Controls</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abendynp_subscreen">7.31</a> | <a href="../../7.40/abendynp_subscreen">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>Subscreens dynpros are defined like normal dynpros in
@@ -292,41 +305,6 @@ In the PAI event block of a subscreen dynpro, a <a href="../dynpmodule" class="b
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abendynp_splitter_control_spcl/" title="Splitter Controls" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Splitter Controls
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abendynp_subscreens/" title="Subscreens, Tabstrips, and Splitter Controls" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Subscreens, Tabstrips, and Splitter Controls
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

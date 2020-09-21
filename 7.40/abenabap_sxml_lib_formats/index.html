@@ -15,7 +15,7 @@
     
     
       
-        <title>sXML Library - Formats - ABAP docs</title>
+        <title>Abenabap sxml lib formats - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              sXML Library - Formats
+              Abenabap sxml lib formats
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,14 @@
                   
                 
                 
-                <h1 id="sxml-library-formats">sXML Library - Formats</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small></p>
+<h1 id="sxml-library-formats">sXML Library - Formats</h1>
 <p>The formats supported by sXML Library are represented by the constants of the interface <span class="lnkgrey">IF_SXML</span>:</p>
 <ul>
 
@@ -327,15 +346,9 @@ of this class does not need an input parameter. XOP writers always return data o
 <p>When an <a href="../abenabap_sxml_lib_parse" class="blue">XML reader</a> is created, it detects the
 format of the data passed to the parameter INPUT of the factory method CREATE. The same reader classes
 can be used for all formats except XOP. Only the special class CL_SXML_XOP_READER can be used for the XOP format. The factory method CREATE of this class expects an actual parameter of the type IF_SXML_XOP=&gt;XOP_PACKAGE.</p>
-<p><s><i>7.31</i></s> <b>7.40</b> <a href="../abenabap_sxml_lib_formats">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml" class="blue">ABAP and XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_xml_libs" class="blue">Class Libraries for XML</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_sxml_lib" class="blue">sXML Library</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <b>7.40</b> | <a href="../../7.54/abenabap_sxml_lib_formats">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul></p>
@@ -369,41 +382,6 @@ ENCODING</span>) uses the byte order mark (BOM) required by the XML standard as 
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_sxml_lib_exceptions/" title="sXML Library - Exception Classes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                sXML Library - Exception Classes
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_sxml_lib_object_types/" title="sXML Library - Classes and Interfaces" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                sXML Library - Classes and Interfaces
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

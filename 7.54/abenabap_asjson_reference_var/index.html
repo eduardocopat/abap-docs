@@ -15,7 +15,7 @@
     
     
       
-        <title>asJSON - Named Reference Variables - ABAP docs</title>
+        <title>Abenabap asjson reference var - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              asJSON - Named Reference Variables
+              Abenabap asjson reference var
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,16 @@
                   
                 
                 
-                <h1 id="asjson-named-reference-variables">asJSON - Named Reference Variables</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_json" class="blue">ABAP and JSON</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_json_trafos" class="blue">Transformations for JSON</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_asjson" class="blue">asJSON - Canonical JSON Representation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_asjson_abap_types" class="blue">asJSON - Mapping of ABAP Data Types</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_asxml_references" class="blue">asJSON - Mapping of Reference Variables and Objects</a>&#xA0;</small></p>
+<h1 id="asjson-named-reference-variables">asJSON - Named Reference Variables</h1>
 <p>Like a regular data object, a named reference variable is represented as an object component that has special content:</p>
 <dd>
 <span class="qtext400">&quot;bni&quot;:{ &quot;%ref&quot;:&quot;#key&quot; }</span>
@@ -260,16 +281,8 @@ is a character-like value <span class="qtext400">&quot;#key&quot;</span>, where 
 is the unique key of an object component in the object <span class="qtext400">%heap</span>. The object
 of an initial reference is empty. The <span class="qtext400">key</span> key of the ABAP runtime environment is set in serializations; in deserializations, any key can be used.</p>
 <p>Otherwise the same rules apply to serializations and deserializations of named reference variables as to <a href="../abenasxml_reference_variable" class="blue">asXML</a> and the same special cases need to be noted.</p>
-<p><s><i>7.31</i></s> <a href="../abenabap_asjson_reference_var">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP &#x2212; Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_data_communication" class="blue">Data Interfaces and Communication Interfaces</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_json" class="blue">ABAP and JSON</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_json_trafos" class="blue">Transformations for JSON</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_asjson" class="blue">asJSON - Canonical JSON Representation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_asjson_abap_types" class="blue">asJSON - Mapping of ABAP Data Types</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_asxml_references" class="blue">asJSON - Mapping of Reference Variables and Objects</a>&#xA0;</small></p>
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abenabap_asjson_reference_var">7.40</a> | <b>7.54</b></p>
 <h3 id="executable-example">Executable Example</h3>
 <p><a href="../abenserialize_dref_abexa" class="blue">Serializing Data References</a></p>
                 
@@ -286,41 +299,6 @@ of an initial reference is empty. The <span class="qtext400">key</span> key of t
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_asjson_general/" title="asJSON - General Format" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                asJSON - General Format
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_asjson_schema/" title="asJSON - Mapping Additional XML Schema Data Types" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                asJSON - Mapping Additional XML Schema Data Types
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

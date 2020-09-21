@@ -15,7 +15,7 @@
     
     
       
-        <title>Calling Programs - ABAP docs</title>
+        <title>Abenabap program call - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Calling Programs
+              Abenabap program call
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -248,7 +260,11 @@
                   
                 
                 
-                <h1 id="calling-programs">Calling Programs</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;</small></p>
+<h1 id="calling-programs">Calling Programs</h1>
 <p>If permitted by the package concept, each <a href="../abenprocessing_block_glosry" class="grey" title="Glossary Entry">processing block</a> of ABAP program makes it possible to call</p>
 <ul>
 
@@ -275,12 +291,9 @@ A call sequence can have a maximum of nine internal sessions. If this maximum is
 <p>When the calling program is completely exited (right side of the figure), the called program is started in a new internal session, which replaces the internal session of the calling program.</p>
 <p>A program that creates an internal session when it is called represents the main program of the
 <a href="../abenmain_program_group_glosry" class="grey" title="Glossary Entry">main program group</a> in the internal session.  </p>
-<p><a href="../abenabap_program_call">7.31</a> <b>7.40</b> <a href="../abenabap_program_call">7.54</a></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_reference" class="blue">ABAP - Reference</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_execution" class="blue">Calling and leaving program units</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <a href="../../7.31/abenabap_program_call">7.31</a> | <b>7.40</b> | <a href="../../7.54/abenabap_program_call">7.54</a></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition note">
 <p class="admonition-title">Note</p></p>
 <p>When the runtime environment loads a called program, the event <a href="../abapload-of-program" class="blue"><code style="display: inline;"><span class="qtext">LOAD-OF-PROGRAM</span></code></a> is triggered in that program.</p>
@@ -303,41 +316,6 @@ A call sequence can have a maximum of nine internal sessions. If this maximum is
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abenabap_processing_blocks/" title="Reporting Events" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Reporting Events
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abenabap_program_glosry/" title="ABAP program" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                ABAP program
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

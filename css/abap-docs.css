@@ -22,3 +22,7 @@ ul.circlem2 {
 .md-footer-nav {
     visibility: hidden;
 }
+
+.md-sidebar {
+    visibility: hidden;
+}

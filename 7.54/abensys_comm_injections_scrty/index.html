@@ -15,7 +15,7 @@
     
     
       
-        <title>System Command Injections - ABAP docs</title>
+        <title>Abensys comm injections scrty - ABAP docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              System Command Injections
+              Abensys comm injections scrty
             
           </span>
         </div>
@@ -190,8 +190,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="ABAP docs" class="md-nav__link">
-      ABAP docs
+    <a href="../.." title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../7.31/abapdata_options/" title="7.31" class="md-nav__link">
+      7.31
     </a>
   </li>
 
@@ -231,7 +243,11 @@
                   
                 
                 
-                <h1 id="system-command-injections">System Command Injections</h1>
+                <p><small>
+<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
+<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
+<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small></p>
+<h1 id="system-command-injections">System Command Injections</h1>
 <p>A <a href="../abensyst_comm_injection_glosry" class="grey" title="Glossary Entry">system command injection</a>
 is a attack method that can result from insufficiently secure input from outside. A system command injection forwards malicious
 <a href="../abenabap_system_commands" class="blue">operating system statements</a>, which enter a program
@@ -292,12 +308,9 @@ should never be passed to the operating system without being checked first. Chec
 input when using <code style="display: inline;"><span class="qtext">FILTER</span></code> or <code style="display: inline;"><span class="qtext">CALL &apos;SYSTEM&apos;</span></code> is, however, particularly difficult, since all possible operating systems and code pages must be covered.</p>
 <p>In principle, all input from outside must be checked if passed to the parameters of SXPG framework function
 modules and to parameters of the method or function module used to execute operating system statements on the presentation server. This prevents unwanted effects from operating system statements.</p>
-<p><s><i>7.31</i></s> <a href="../abensys_comm_injections_scrty">7.40</a> <b>7.54</b></p>
-<p><small>
-<a href="../abenabap" class="blue">ABAP Keyword Documentation</a>&#xA0;&#x2192;&#xA0;
-<a href="../abenabap_security" class="blue">ABAP - Security Notes</a>&#xA0;&#x2192;&#xA0;
-<a href="../abendynamic_programming_scrty" class="blue">Security Risks Caused by Input from Outside</a>&#xA0;</small>
-<br style="display: block">
+<p>Other versions: 
+ <s><i>7.31</i></s> | <a href="../../7.40/abensys_comm_injections_scrty">7.40</a> | <b>7.54</b></p>
+<p><br style="display: block">
 <div markdown="span" class="admonition example">
 <p class="admonition-title">Example</p></p>
 <p>In the following program section, the operating system statement <span class="qtext400">ping</span> of the
@@ -422,41 +435,6 @@ the same name (but with the wrong function) into a directory in front of the req
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../abensyntax_obsolete/" title="Obsolete Syntax" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Obsolete Syntax
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../abensys_table_body/" title="*sys*, Obsolete Pseudo Component" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                *sys*, Obsolete Pseudo Component
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
