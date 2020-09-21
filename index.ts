@@ -33,7 +33,6 @@ const parseFiles = function parseFiles(version: string) {
       process.stdout.write(`processing ${chalk.blue(file.path)} \n`);
       const parser = new Parser(file, new Renderer(), files);
       const contents = parser.parse();
-      // parser.parseNavigation(root731);
 
       fse.outputFile(path.join(__dirname, `./docs/${version}/${file.name}.md`), contents, (err: any) => {
         if (!err) return;
@@ -58,6 +57,11 @@ parseFiles('7.54');
 try {
   fse.copySync('base-mkdocs.yml', 'mkdocs.yml');
   process.stdout.write(chalk.green('Copied mkdocs.yml\n'));
+
+  fse.copySync('base-pages.yml', './docs/7.31/.pages');
+  fse.copySync('base-pages.yml', './docs/7.40/.pages');
+  fse.copySync('base-pages.yml', './docs/7.54/.pages');
+  process.stdout.write(chalk.green('Copied .pages\n'));
 
   process.stdout.write(chalk.green('Success\n'));
 } catch (err) {

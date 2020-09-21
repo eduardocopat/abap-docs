@@ -1,5 +1,6 @@
 #node
 node_modules/
+report.*
 
 #SAP HTML docs
 sapdocs/*

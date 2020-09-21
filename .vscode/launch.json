@@ -13,6 +13,19 @@
                 "<node_internals>/**"
             ],
             "type": "pwa-node"
+        },
+        {
+            "name": "Execute via NPM",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "execute"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
         }
         
         
