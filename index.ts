@@ -20,10 +20,10 @@ const parseFiles = function parseFiles(version: string) {
     files.forEach((file: SapDocFile) => {
       if (DEBUG) {
         if (file.name !== 'abapread_table_key'
-            && file.name !== 'abapmethods_general'
-            && file.name !== 'abapappend'
-            && file.name !== 'abapdata_options'
-            && file.name !== 'abapread_table'
+          && file.name !== 'abapmethods_general'
+          && file.name !== 'abapappend'
+          && file.name !== 'abapdata_options'
+          && file.name !== 'abapread_table'
         ) {
           return;
         }

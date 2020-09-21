@@ -29,6 +29,11 @@ export default class Parser {
   }
 
   parse(): string {
+    const path: CheerioElement = this.$('.path')[0];
+    if (path) {
+      this.parsePath(path);
+    }
+
     const root: CheerioElement = this.$('.all')[0];
 
     if (root === undefined) {
@@ -102,10 +107,6 @@ export default class Parser {
 
     if (header.isMainTitle) {
       this.parseVersioning();
-      const path: CheerioElement = this.$('.path')[0];
-      if (path) {
-        this.parsePath(path);
-      }
     }
   }
 
@@ -113,10 +114,10 @@ export default class Parser {
     // Example:
     // Versions: <u>7.31</u> [7.40](../cds) [7.54](../cds)
 
-    const version731 = this.renderVersion('7.31', this.findFile('7.31'), `../${this.file.name}`);
-    const version740 = this.renderVersion('7.40', this.findFile('7.40'), `../${this.file.name}`);
-    const version754 = this.renderVersion('7.54', this.findFile('7.54'), `../${this.file.name}`);
-    const versioning = `${version731} ${version740} ${version754}\n`;
+    const version731 = this.renderVersion('7.31', this.findFile('7.31'), `../../7.31/${this.file.name}`);
+    const version740 = this.renderVersion('7.40', this.findFile('7.40'), `../../7.40/${this.file.name}`);
+    const version754 = this.renderVersion('7.54', this.findFile('7.54'), `../../7.54/${this.file.name}`);
+    const versioning = `Other versions: \n ${version731} | ${version740} | ${version754}\n`;
     this.renderer.renderText(versioning);
   }
 

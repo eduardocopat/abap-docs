@@ -21,3 +21,6 @@ markdown_extensions:
 plugins:
     - search
     - awesome-pages
+nav:
+  - 'Intro': index.md    
+  - 7.31: 7.31/abapdata_options.md
